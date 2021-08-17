@@ -1,4 +1,4 @@
 library(testthat)
-library(tidyverse-koans)
+library(tidyversekoans)
 
-test_check("tidyverse-koans")
+test_check("tidyversekoans")

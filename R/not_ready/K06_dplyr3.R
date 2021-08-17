@@ -8,17 +8,17 @@
 
 #-------------------------------------------------------------------------
 
-# In this exercise, we'll learn the final two dplyr verbs: 'arrange' and 
+# In this exercise, we'll learn the final two dplyr verbs: 'arrange' and
 # 'slice'.
 
-# Run this code to get started. 
+# Run this code to get started.
 
 library(tidyverse)
 library(gapminder)
 
 #--- 1. arrange() --------------------------------------------------------
 
-# 'arrange()' rearranges the rows of your tibble by the variable you specify. 
+# 'arrange()' rearranges the rows of your tibble by the variable you specify.
 
 gapminder %>%
   arrange(pop)
@@ -35,7 +35,7 @@ gapminder %>%
 # 1.1 Take all the observations in Asia and sort them from the highest
 # life expectancies to the lowest.
 
-__
+# __
 
 # Read the qelp docs on 'arrange()':
 
@@ -66,10 +66,10 @@ gapminder %>%
 gapminder %>%
   slice_tail(n = 2)
 
-# 2.1 Take all the observations in Asia and return the five with the 
+# 2.1 Take all the observations in Asia and return the five with the
 # highest life expectancies.
 
-__
+# __
 
 
 # This type of task is so common, 'slice_min()' and 'slice_max()'
@@ -83,7 +83,7 @@ gapminder %>%
 # take 'gapminder', group by 'continent', and use 'slice_max' to find
 # the observation with the highest life expectancy *for each continent*.
 
-__
+# __
 
 
 #-------------------------------------------------------------------------

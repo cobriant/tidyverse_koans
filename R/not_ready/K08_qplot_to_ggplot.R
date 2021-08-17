@@ -33,7 +33,7 @@ library(tidyverse)
 install.packages("gapminder")
 library(gapminder)
 US_data <- filter(gapminder, country == "United States")
-view(US_data)
+# view(US_data)
 
 #-------------------------------------------------------------------------
 
@@ -43,8 +43,8 @@ qplot(data = US_data, x = gdpPercap, y = lifeExp)
 
 # 1. Replicate that scatterplot using 'ggplot()':
 
-ggplot(data = __, aes(x = __, y = __)) +
-  geom_point()
+# ggplot(data = __, aes(x = __, y = __)) +
+#   geom_point()
 
 # Notice 'ggplot()' wraps x and y in 'aes'. We'll talk more about
 # that in the next exercise, "ggplot aesthetic mappings".
@@ -54,9 +54,9 @@ ggplot(data = __, aes(x = __, y = __)) +
 # You've also practiced adding main titles and axis labels to your qplot:
 
 qplot(
-  data = US_data, 
-  x = gdpPercap, 
-  y = lifeExp, 
+  data = US_data,
+  x = gdpPercap,
+  y = lifeExp,
   main = "As GDP per capita increases, so does life expectancy",
   xlab = "GDP per capita",
   ylab = "Life expectancy"
@@ -64,9 +64,9 @@ qplot(
 
 # 2. Add a main title and axis labels (labs) to your ggplot:
 
-ggplot(data = __, aes(x = __, y = __)) +
-  geom_point() +
-  labs(x = __, y = __, title = __)
+# ggplot(data = __, aes(x = __, y = __)) +
+#   geom_point() +
+#   labs(x = __, y = __, title = __)
 
 # Notice that with 'ggplot()', functions are added '+' to the main
 # ggplot call. These are called layers. So a layer is added to draw
@@ -75,22 +75,22 @@ ggplot(data = __, aes(x = __, y = __)) +
 
 #-------------------------------------------------------------------------
 
-# You've also practiced using multiple geoms with a qplot: 
+# You've also practiced using multiple geoms with a qplot:
 
 qplot(
-  data = US_data, 
-  x = gdpPercap, 
-  y = lifeExp, 
+  data = US_data,
+  x = gdpPercap,
+  y = lifeExp,
   geom = c("point", "line", "smooth")
 )
 
 # 3. Use multiple geom's in a ggplot (if there's no blank '__', you don't
 #    need to write anything!):
 
-ggplot(data = __, aes(x = __, y = __)) +
-  geom_point() +
-  geom_line() +
-  geom_smooth()
+# ggplot(data = __, aes(x = __, y = __)) +
+#   geom_point() +
+#   geom_line() +
+#   geom_smooth()
 
 # Notice that with 'ggplot()', to add multiple geoms, you add '+' layers.
 
@@ -99,5 +99,5 @@ ggplot(data = __, aes(x = __, y = __)) +
 # Great work! You're one step closer to tidyverse enlightenment.
 #   Make sure to return to this topic to meditate on it later.
 
-# If you're ready, you can move on to the next exercise, 
+# If you're ready, you can move on to the next exercise,
 #   Exercise 9: ggplot aesthetic mappings.

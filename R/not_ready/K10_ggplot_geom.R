@@ -10,8 +10,8 @@
 
 # Exercise 10: ggplot 'geom's
 
-#   In this chapter, we'll practice using some of the most commonly used 
-#   'geom's, one by one. Keep in mind that you can use multiple 'geoms' at 
+#   In this chapter, we'll practice using some of the most commonly used
+#   'geom's, one by one. Keep in mind that you can use multiple 'geoms' at
 #   a time by layering them on top of each other.
 
 #-------------------------------------------------------------------------
@@ -20,7 +20,7 @@
 
 library(tidyverse)
 library(gapminder)
-view(gapminder)
+# view(gapminder)
 
 #-------------------------------------------------------------------------
 
@@ -37,86 +37,86 @@ view(gapminder)
 
 # 1.1 Draw a histogram using 'geom_histogram()'.
 
-ggplot(
-  data = gapminder, 
-  aes(x = lifeExp, color = continent, fill = continent)
-  ) +
-  __
+# ggplot(
+#   data = gapminder,
+#   aes(x = lifeExp, color = continent, fill = continent)
+#   ) +
+#   __
 
 # 1.2 Experiment with different 'binwidth's for your histogram.
 
-ggplot(
-  data = gapminder, 
-  aes(x = lifeExp, color = continent, fill = continent)
-  ) +
-  __(binwidth = __)
+# ggplot(
+#   data = gapminder,
+#   aes(x = lifeExp, color = continent, fill = continent)
+#   ) +
+#   __(binwidth = __)
 
 #-------------------------------------------------------------------------
 
 # 2. 'geom_freqpoly()'
-#   'geom_freqpoly()' is just like a histogram, but it uses lines 
+#   'geom_freqpoly()' is just like a histogram, but it uses lines
 #   instead of bars to communicate the number of observations in each
 #   bin. Again, experiment with binwidth.
 
-ggplot(
-  data = gapminder, aes(x = lifeExp, color = continent)
-  ) +
-  __(binwidth = __)
+# ggplot(
+#   data = gapminder, aes(x = lifeExp, color = continent)
+#   ) +
+#   __(binwidth = __)
 
 #-------------------------------------------------------------------------
 
 # 3. 'geom_area()'
 #   You can make a filled frequency polygon using an area plot:
-#   'geom_area()'. 
+#   'geom_area()'.
 
-# 3.1 In the blank, experiment with setting 'color' versus 'fill' as 
+# 3.1 In the blank, experiment with setting 'color' versus 'fill' as
 #   'continent'.
 
-ggplot(
-  data = gapminder, 
-  aes(x = lifeExp, __ = continent)
-  ) +
-  geom_area(stat = "bin")
+# ggplot(
+#   data = gapminder,
+#   aes(x = lifeExp, __ = continent)
+#   ) +
+#   geom_area(stat = "bin")
 
 # 3.2 Notice that the continents are stacked up on top of each other in
 # the previous plot. To change that behavior, set 'position = "identity"'
 
-ggplot(
-  data = gapminder, 
-  aes(x = lifeExp, fill = continent)
-  ) +
-  geom_area(stat = "bin", position = __)
+# ggplot(
+#   data = gapminder,
+#   aes(x = lifeExp, fill = continent)
+#   ) +
+#   geom_area(stat = "bin", position = __)
 
 # 3.3 The issue now is that there's overplotting. Data for the Americas
 # is totally hidden behind the other continents! One way to fix this is
 # to adjust the transparency of points through 'alpha'. Setting 'alpha = .5'
 # reduces the 'geom' transparency to 50%. Experiment with different alphas.
 
-ggplot(
-  data = gapminder, 
-  aes(x = lifeExp, fill = continent)
-  ) +
-  geom_area(stat = "bin", position = "identity", alpha = __)
+# ggplot(
+#   data = gapminder,
+#   aes(x = lifeExp, fill = continent)
+#   ) +
+#   geom_area(stat = "bin", position = "identity", alpha = __)
 
 #-------------------------------------------------------------------------
 
-# 4. 'geom_density()': 
+# 4. 'geom_density()':
 
-#   An alternative to bin visualizations is density visualizations. 
-#   They smooth out the distributions and account for factors like the fact 
-#   that there aren't very many observations from Oceania. The downside 
-#   is what's measured on the y-axis is less intuitive than the 'count' 
+#   An alternative to bin visualizations is density visualizations.
+#   They smooth out the distributions and account for factors like the fact
+#   that there aren't very many observations from Oceania. The downside
+#   is what's measured on the y-axis is less intuitive than the 'count'
 #   we've seen in the other 'geom's.
 
 # 4.1 Experiment with setting 'color' and 'fill' to 'continent'.
 
-ggplot(data = gapminder, aes(x = lifeExp, __)) +
-  __()
+# ggplot(data = gapminder, aes(x = lifeExp, __)) +
+#   __()
 
 # 4.2 Also experiment with different 'alpha's.
 
-ggplot(data = gapminder, aes(x = lifeExp, __)) +
-  __(alpha = __)
+# ggplot(data = gapminder, aes(x = lifeExp, __)) +
+#   __(alpha = __)
 
 #-------------------------------------------------------------------------
 
@@ -133,25 +133,25 @@ ggplot(data = gapminder, aes(x = lifeExp, __)) +
 #     (and for a horizontal line, you'd need to specify a y-intercept).
 #     Do this with 'xintercept = 70'.
 
-ggplot(
-  data = gapminder, 
-  aes(x = lifeExp, color = continent, fill = continent)
-  ) +
-  geom_density(alpha = .3) +
-  __
+# ggplot(
+#   data = gapminder,
+#   aes(x = lifeExp, color = continent, fill = continent)
+#   ) +
+#   geom_density(alpha = .3) +
+#   __
 
-# 5.2 Include the vertical line you did above, and also note how the 
+# 5.2 Include the vertical line you did above, and also note how the
 # annotation ('annotate()') labels the line.
 
-ggplot(
-  data = gapminder, 
-  aes(x = lifeExp, color = continent, fill = continent)
-  ) +
-  geom_density(alpha = .3) +
-  __ +
-  annotate(
-    "text", x = 70, y = .075, label = "70 years", angle = 90
-    )
+# ggplot(
+#   data = gapminder,
+#   aes(x = lifeExp, color = continent, fill = continent)
+#   ) +
+#   geom_density(alpha = .3) +
+#   __ +
+#   annotate(
+#     "text", x = 70, y = .075, label = "70 years", angle = 90
+#     )
 
 #-------------------------------------------------------------------------
 
@@ -172,36 +172,36 @@ ggplot(
 # We've already talked about basic scatterplots. Try to recall how to draw
 # a 'ggplot' that plots 'gdpPercap' on the x-axis and 'lifeExp' on the y-axis.
 
-__
+# __
 
 # 7. 'geom_smooth()'
 
-# 7.1 Add a smoothed line layer to the plot you did above using 
+# 7.1 Add a smoothed line layer to the plot you did above using
 # 'geom_smooth()'.
 
-__
+# __
 
 # 7.2 Remove the standard error ribbon using 'geom_smooth(se = FALSE)'
 
-__
+# __
 
 # 7.3 Visualize the OLS fit by using 'geom_smooth(method = "lm")'
 # "lm" stands for "linear model".
 
-__
+# __
 
 #-------------------------------------------------------------------------
 
 # 8. The visualization we made in 8) needs some work. The first issue is
-# that there seems to be heteroskedasticity, so our fitted line is not a 
+# that there seems to be heteroskedasticity, so our fitted line is not a
 # good fit. A quick fix is to apply a log transformation to gdpPercap.
 
-# 8.1 Instead of plotting 'gdpPercap' on the x-axis, plot the log of that 
+# 8.1 Instead of plotting 'gdpPercap' on the x-axis, plot the log of that
 # 'gdpPercap' using the 'log()' function.
 
-ggplot(data = gapminder, aes(x = __, y = lifeExp)) +
-  geom_point() +
-  geom_smooth(method = "lm")
+# ggplot(data = gapminder, aes(x = __, y = lifeExp)) +
+#   geom_point() +
+#   geom_smooth(method = "lm")
 
 # Notice that the units on the x-axis of the previous plot are in log
 #   terms, which is hard to interpret. I prefer this method:
@@ -218,34 +218,34 @@ ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
 # a way to visualize how dense the points are getting. For this, we can
 # replace 'geom_point()' with 'geom_hex()'.
 
-ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
-  scale_x_log10(labels = scales::comma) +
-  __ +
-  geom_smooth(method = "lm")
+# ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
+#   scale_x_log10(labels = scales::comma) +
+#   __ +
+#   geom_smooth(method = "lm")
 
 #-------------------------------------------------------------------------
 
 # 9. 'geom_line()'
-# Draw a line plot using 'geom_line'. Compare US 'gdpPercap' over 
+# Draw a line plot using 'geom_line'. Compare US 'gdpPercap' over
 # time to two other countries of your choice.
 
-gapminder %>%
-  filter(country %in% c("United States", __, __)) %>%
-  ggplot(aes(x = year, y = gdpPercap, color = country)) +
-  geom_line()
+# gapminder %>%
+#   filter(country %in% c("United States", __, __)) %>%
+#   ggplot(aes(x = year, y = gdpPercap, color = country)) +
+#   geom_line()
 
 #-------------------------------------------------------------------------
 
-# 10. Draw a boxplot with 'geom_boxplot()' that compares the 
-# gdpPercap (on the y-axis) of different continents (on the x-axis, 
+# 10. Draw a boxplot with 'geom_boxplot()' that compares the
+# gdpPercap (on the y-axis) of different continents (on the x-axis,
 # also using color). Experiment with applying a log transformation
 # to gdpPercap (now on the y-axis).
 
-ggplot(
-  data = gapminder, 
-  aes(x = gdoPercap, y = continent, color = continent)
-  ) +
-  __
+# ggplot(
+#   data = gapminder,
+#   aes(x = gdoPercap, y = continent, color = continent)
+#   ) +
+#   __
 
 #-------------------------------------------------------------------------
 
@@ -253,21 +253,21 @@ ggplot(
 # Also include 'fill'. Make sure you use 'scale_y_log10()' to transform the
 # y-axis into log terms.
 
-ggplot(
-  data = gapminder, 
-  aes(x = __, y = __, color = __, fill = __)
-  ) +
-  scale__ +
-  __
+# ggplot(
+#   data = gapminder,
+#   aes(x = __, y = __, color = __, fill = __)
+#   ) +
+#   scale__ +
+#   __
 
 #-------------------------------------------------------------------------
 
-# Finally, check out how simple it is to change your 'facet_wrap' to 
+# Finally, check out how simple it is to change your 'facet_wrap' to
 # a slick animation with 'gganimate'!
 # The 'facet_wrap' version:
 
 ggplot(
-  data = gapminder, 
+  data = gapminder,
   aes(x = log(gdpPercap), y = lifeExp)
   ) +
   geom_point(aes(color = continent)) +
@@ -276,17 +276,17 @@ ggplot(
 
 # The animated version (this may take a second to render)
 
-install.packages("gganimate")
-library(gganimate)
-
-ggplot(
-  data = gapminder, 
-  aes(x = log(gdpPercap), y = lifeExp)
-  ) +
-  geom_point(aes(color = continent)) +
-  geom_density2d(color = "grey", alpha = .5) +
-  gganimate::transition_time(year) +
-  labs(title = "Year: {frame_time}")
+# install.packages("gganimate")
+# library(gganimate)
+#
+# ggplot(
+#   data = gapminder,
+#   aes(x = log(gdpPercap), y = lifeExp)
+#   ) +
+#   geom_point(aes(color = continent)) +
+#   geom_density2d(color = "grey", alpha = .5) +
+#   gganimate::transition_time(year) +
+#   labs(title = "Year: {frame_time}")
 
 #-------------------------------------------------------------------------
 

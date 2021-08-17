@@ -10,7 +10,7 @@
 
 # The next two dplyr verbs: 'summarize' and 'group_by'
 
-# Run this code to get started. 
+# Run this code to get started.
 
 library(tidyverse)
 library(gapminder)
@@ -31,7 +31,7 @@ gapminder %>%
 # and summarize to find the median life expectancy, population, and
 # GDP per capita.
 
-__
+# __
 
 # Read the qelp docs on 'summarize()':
 
@@ -79,20 +79,20 @@ gapminder %>%
 # each bucket individually to calculate the summary statistic before
 # reporting the results.
 
-# Grouped summaries are profoundly useful. Working with data, you'll use 
+# Grouped summaries are profoundly useful. Working with data, you'll use
 # them all the time.
 
 # 2.1 Take 'gapminder', filter for only observations in Africa,
 # and summarize to find the median life expectancy, population, and
 # GDP per capita *for each country*.
 
-__
+# __
 
 
 # 2.2 Summarize 'gapminder' to find the mean GDP per capita for each
 # country, for each year (2 grouping variables).
 
-__
+# __
 
 
 # Read the qelp docs on 'group_by()':
@@ -136,12 +136,12 @@ gapminder %>%
 
 # 3.1: How many observations are there from each country?
 
-__
+# __
 
 #-------------------------------------------------------------------------
 
 # Great work! You're one step closer to tidyverse enlightenment.
 # Make sure to return to this topic to meditate on it later.
 
-# If you're ready, you can move on to the next exercise, Exercise 6: 
+# If you're ready, you can move on to the next exercise, Exercise 6:
 # arrange and slice.

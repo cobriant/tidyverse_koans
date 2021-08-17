@@ -11,11 +11,11 @@
 # Statistical Distributions in R
 
 # The first section of this exercise is an example of how to work with the
-# normal distribution in R for random number generation, plots, and 
+# normal distribution in R for random number generation, plots, and
 # hypothesis testing.
 
 # In the three sections that follow, you'll practice the same thing but
-# with the t distribution, the F distribution, and the Chi-square 
+# with the t distribution, the F distribution, and the Chi-square
 # distribution.
 
 # Run this code to get started:
@@ -31,7 +31,7 @@ library(tidyverse)
 
 # --- rnorm() ------------------------------------------------------------
 # Random generation: 'rnorm(n, mean, sd)' (r is for random)
-#   This generates a vector of n random numbers from the normal (0, 1) 
+#   This generates a vector of n random numbers from the normal (0, 1)
 #   distribution:
 
 rnorm(n = 10, mean = 0, sd = 1)
@@ -42,8 +42,8 @@ rnorm(n = 10, mean = 0, sd = 1)
 
 ggplot() +
   stat_function(
-    fun = dnorm, 
-    args = list(mean = 0, sd = 1), 
+    fun = dnorm,
+    args = list(mean = 0, sd = 1),
     geom = "line"
     ) +
   xlim(-5, 5)
@@ -52,8 +52,8 @@ ggplot() +
 # Hypothesis testing using 'qnorm()' (q for quantile):
 
 # Is a test statistic of 1.6 in the accept region or the reject region?
-#  This looks up the critical value for the normal distribution for a 
-#  two-sided test at the 5% level. 
+#  This looks up the critical value for the normal distribution for a
+#  two-sided test at the 5% level.
 
 qnorm(p = .975, mean = 0, sd = 1)
 
@@ -65,7 +65,7 @@ qnorm(p = .975, mean = 0, sd = 1)
 
 ggplot() +
   stat_function(fun = dnorm, args = list(mean = 0, sd = 1), geom = "line") +
-  stat_function(fun = dnorm, args = list(mean = 0, sd = 1), geom = "area", 
+  stat_function(fun = dnorm, args = list(mean = 0, sd = 1), geom = "area",
                 fill = "red", xlim = c(qnorm(.975), 5)) +
   xlim(-5, 5) +
   geom_vline(xintercept = 1.6, color = "blue")
@@ -78,25 +78,25 @@ ggplot() +
 ?rt
 
 # --- rt() ---------------------------------------------------------------
-# 1. Generate 8 random numbers from the t distribution with 55 degrees of 
+# 1. Generate 8 random numbers from the t distribution with 55 degrees of
 # freedom.
 
-__
+# __
 
 # --- dt() ---------------------------------------------------------------
 # 2. Draw the t distribution (with 55 degrees of freedom) in a ggplot.
 
-__
+# __
 
 # --- qt() ----------------------------------------------------------------
 # 3. Is a test statistic of 2.2 in the accept region or the reject region?
 # Conduct a two-sided test at the 5% level using 55 degrees of freedom.
 
-__
+# __
 
 # --- 4. Visualize the hypothesis test using ggplot: ----------------------
 
-__
+# __
 
 #-------------------------------------------------------------------------
 # --- The F distribution -------------------------------------------------
@@ -106,26 +106,26 @@ __
 ?rf
 
 # --- rf() ---------------------------------------------------------------
-# 5. Generate 10 random numbers from the F distribution with 10 degrees of 
+# 5. Generate 10 random numbers from the F distribution with 10 degrees of
 # freedom in the numerator and 20 degrees of freedom in the denominator.
 
-__
+# __
 
 # --- df() ---------------------------------------------------------------
 # 6. Draw the F distribution in a ggplot. Continue to use the degrees of
 # freedom in question 5.
 
-__
+# __
 
 # --- qf() ----------------------------------------------------------------
 # 7. Is a test statistic of 2.2 in the accept region or the reject region?
 # Perform a one-tailed test at the 5% level.
 
-__
+# __
 
 # --- 8. Visualize the hypothesis test using ggplot: ----------------------
 
-__
+# __
 
 
 #-------------------------------------------------------------------------
@@ -139,26 +139,26 @@ __
 # 9. Generate 10 random numbers from the chi-square distribution with 4
 # degrees of freedom.
 
-__
+# __
 
 
 # --- dchisq() -----------------------------------------------------------
-# 10. Draw the Chi-square distribution in a ggplot. Continue to use the 
+# 10. Draw the Chi-square distribution in a ggplot. Continue to use the
 # degrees of freedom in question 9.
 
-__
+# __
 
 
 # --- qchisq() -------------------------------------------------------------
-# 11. Is a test statistic of 13 in the accept region or the reject region 
+# 11. Is a test statistic of 13 in the accept region or the reject region
 #  for a 95% one-tailed test?
 
-__
+# __
 
 
 # --- 12. Visualize the hypothesis test using ggplot: ----------------------
 
-__
+# __
 
 
 #-------------------------------------------------------------------------
