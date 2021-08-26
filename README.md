@@ -1,4 +1,4 @@
-# tidyversekoans
+# tidyverse koans
 
 # Getting started
 
@@ -21,23 +21,25 @@ Tools > Modify keyboard shortcuts > Run a test file > Ctrl Shift T
 #### 4. Open the first koan `R/K01_vector.R` and get started!
 
 
-# Todos
+# Outline
 
 - [x] 1: vectors
 - [x] 2: tibbles
-- [x] 3: pipes
-- [x] 4: qplot
-- [ ] 5: dplyr 1
-- [ ] 6: dplyr 2
-- [ ] 7: dplyr 3
-- [ ] 8: left_join
-- [ ] 9: murder mystery
-- [ ] 10: lm
-- [ ] 11: qplot to ggplot
-- [ ] 12: ggplot aes
-- [ ] 13: ggplot geoms
-- [ ] 14: stats
-- [ ] 15: writing your own functions
-- [ ] 16: writing functions on top of dplyr
-- [ ] 17: simulations with map
-- [ ] 18: reduce and accumulate
+- [x] 3: piping
+- [ ] 4: filter, select, mutate
+- [ ] 5: summarize and group_by
+- [ ] 6: arrange and slice
+- [ ] 7: left_join
+- [ ] 8: qplot to ggplot
+- [ ] 9: ggplot aesthetic mappings
+- [ ] 10: ggplot geoms
+- [ ] 11: lm
+- [ ] 12: stats in R
+- [ ] 13: custom functions
+- [ ] 14: custom functions that use dplyr
+- [ ] 15: map
+- [ ] 16: map_*
+- [ ] 17: lag
+- [ ] 18: first differences
+- [ ] 19: reduce
+- [ ] 20: accumulate
