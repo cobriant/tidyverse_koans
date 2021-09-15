@@ -1,20 +1,24 @@
-# Intro to the Tidyverse by Colleen O'Briant
+#-------------------------------------------------------------------------
+#            Intro to the Tidyverse by Colleen O'Briant
+#                    Koan #8: qplot to ggplot
+#-------------------------------------------------------------------------
 
-# In order to progress, all you need to do is fill in the blanks: __.
-# Then run the code to make sure you're getting the desired result.
-# Use hotkeys for this: highlight the code you want to run, or put
-# your cursor at the end of the line. Then hit command + enter on a
-# mac, or ctrl + enter on windows.
+# In order to progress:
+# 1. Read all instructions carefully.
+# 2. When you come to an exercise, fill in the blank and remove the hashtag
+#    (Ctrl/Cmd Shift C) to execute the code in the console (Ctrl/Cmd Return).
+#    If the piece of code spans multiple lines, highlight the whole chunk
+#    or simply put your cursor at the end of the last line.
+# 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 
 #-------------------------------------------------------------------------
 
-# Exercise 8: 'qplot()' to 'ggplot()'
+# Exercise 8: qplot() to ggplot()
 
   # The tidyverse ecosystem has 2 great ways to draw plots: they are
-  # 'qplot' and 'ggplot'. You've already had some practice drawing qplots.
-
-  # 'qplot' was designed to be a simplified version of 'ggplot', so you
-  # already have a head start with learning 'ggplot'!
+  # qplot() and ggplot(). You've already had some practice drawing qplots
+  # in project 1. qplot() was designed to be a simplified version of
+  # ggplot(), so you already have a head start with learning ggplot()!
 
   # What's with the name?
   # The double g's in 'ggplot' stand for the "grammar of graphics". The
@@ -30,24 +34,27 @@
 # Run this code to get started and to take a look at the data:
 
 library(tidyverse)
-install.packages("gapminder")
 library(gapminder)
 US_data <- filter(gapminder, country == "United States")
 # view(US_data)
 
 #-------------------------------------------------------------------------
 
-# You've practiced building scatterplots with 'qplot' like this:
+# You've practiced building scatterplots with qplot() like this:
 
 qplot(data = US_data, x = gdpPercap, y = lifeExp)
 
-# 1. Replicate that scatterplot using 'ggplot()':
+# 1. Replicate that scatterplot using ggplot() with a points layer:
+
+#1@
 
 # ggplot(data = __, aes(x = __, y = __)) +
 #   geom_point()
 
-# Notice 'ggplot()' wraps x and y in 'aes'. We'll talk more about
-# that in the next exercise, "ggplot aesthetic mappings".
+#@1
+
+# Notice ggplot() wraps x and y in 'aes'. We'll talk more about
+# that in the next koan: ggplot aesthetic mappings.
 
 #-------------------------------------------------------------------------
 
@@ -64,9 +71,13 @@ qplot(
 
 # 2. Add a main title and axis labels (labs) to your ggplot:
 
+#2@
+
 # ggplot(data = __, aes(x = __, y = __)) +
 #   geom_point() +
 #   labs(x = __, y = __, title = __)
+
+#@2
 
 # Notice that with 'ggplot()', functions are added '+' to the main
 # ggplot call. These are called layers. So a layer is added to draw
@@ -87,10 +98,14 @@ qplot(
 # 3. Use multiple geom's in a ggplot (if there's no blank '__', you don't
 #    need to write anything!):
 
+#3@
+
 # ggplot(data = __, aes(x = __, y = __)) +
 #   geom_point() +
 #   geom_line() +
 #   geom_smooth()
+
+#@3
 
 # Notice that with 'ggplot()', to add multiple geoms, you add '+' layers.
 
@@ -99,5 +114,4 @@ qplot(
 # Great work! You're one step closer to tidyverse enlightenment.
 #   Make sure to return to this topic to meditate on it later.
 
-# If you're ready, you can move on to the next exercise,
-#   Exercise 9: ggplot aesthetic mappings.
+# If you're ready, you can move on to koan 9: ggplot aesthetic mappings.

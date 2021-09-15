@@ -1,24 +1,29 @@
-# Intro to the Tidyverse by Colleen O'Briant
+#-------------------------------------------------------------------------
+#            Intro to the Tidyverse by Colleen O'Briant
+#                   Koan #6: arrange and slice
+#-------------------------------------------------------------------------
 
-# In order to progress, all you need to do is fill in the blanks: __.
-# Then run the code to make sure you're getting the desired result.
-# Use hotkeys for this: highlight the code you want to run, or put
-# your cursor at the end of the line. Then hit command + enter on a
-# mac, or ctrl + enter on windows.
+# In order to progress:
+# 1. Read all instructions carefully.
+# 2. When you come to an exercise, fill in the blank and remove the hashtag
+#    (Ctrl/Cmd Shift C) to execute the code in the console (Ctrl/Cmd Return).
+#    If the piece of code spans multiple lines, highlight the whole chunk
+#    or simply put your cursor at the end of the last line.
+# 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 
 #-------------------------------------------------------------------------
 
-# In this exercise, we'll learn the final two dplyr verbs: 'arrange' and
-# 'slice'.
+# In this koan, you'll learn the final two dplyr verbs: arrange() and
+# slice().
 
 # Run this code to get started.
 
 library(tidyverse)
 library(gapminder)
 
-#--- 1. arrange() --------------------------------------------------------
+#--- arrange ------------------------------------------------------------
 
-# 'arrange()' rearranges the rows of your tibble by the variable you specify.
+# arrange() rearranges the rows of your tibble by the variable you specify.
 
 gapminder %>%
   arrange(pop)
@@ -32,18 +37,31 @@ gapminder %>%
 gapminder %>%
   arrange(desc(pop))
 
-# 1.1 Take all the observations in Asia and sort them from the highest
-# life expectancies to the lowest.
+# 1. Take all the observations in Asia and sort them from the lowest
+# life expectancies to the highest.
+
+#1@
 
 # __
 
-# Read the qelp docs on 'arrange()':
+#@1
+
+# 2. Take all the observations in Asia and sort them from the highest
+# life expectancies to the lowest.
+
+#2@
+
+# __
+
+#@2
+
+# Read the qelp docs on arrange():
 
 ?qelp::arrange
 
-#--- 2. slice() --------------------------------------------------------
+#--- slice --------------------------------------------------------------
 
-# 'slice()' lets you select rows by their integer locations. So if you
+# slice() lets you select rows by their integer locations. So if you
 # want to select the second row of 'gapminder':
 
 gapminder %>%
@@ -52,44 +70,54 @@ gapminder %>%
 # If you want to select the second, third, and fourth rows:
 
 gapminder %>%
+  slice(c(2, 3, 4))
+
+# Or equivalently:
+
+gapminder %>%
   slice(2:4)
 
-# Two related functions are 'slice_head()' and 'slice_tail()'.
+# 3. Select row 853 to row 864.
 
-# 'slice_head()' takes the first 'n' rows of a tibble:
+#3@
+
+# __
+
+#@3
+
+# Two related functions are slice_head() and slice_tail().
+
+# slice_head() takes the first 'n' rows of a tibble:
 
 gapminder %>%
   slice_head(n = 2)
 
-# 'slice_tail()' takes the last 'n' rows of a tibble:
+# slice_tail() takes the last 'n' rows of a tibble:
 
 gapminder %>%
   slice_tail(n = 2)
 
-# 2.1 Take all the observations in Asia and return the five with the
-# highest life expectancies.
+# 4. Take all the observations in Asia and return the five with the
+# highest life expectancies (hint: use arrange()).
+
+#4@
 
 # __
 
+#@4
 
-# This type of task is so common, 'slice_min()' and 'slice_max()'
-# were created to make it even easier:
+# 5. Which (one) country has the highest life expectancy in each continent?
+# (hint: use arrange() and also group_by()).
 
-gapminder %>%
-  filter(continent == "Asia") %>%
-  slice_max(lifeExp, n = 5)
-
-# 2.2 'slice_max' and 'slice_min' also work on grouped tibbles. To see this,
-# take 'gapminder', group by 'continent', and use 'slice_max' to find
-# the observation with the highest life expectancy *for each continent*.
+#5@
 
 # __
 
+#@5
 
 #-------------------------------------------------------------------------
 
 # Great work! You're one step closer to tidyverse enlightenment.
 # Make sure to return to this topic to meditate on it later.
 
-# If you're ready, you can move on to a quick tutorial on joins before
-# Exercise 7: a dplyr murder mystery!
+# If you're ready, you can move on to koan 7: left_join.

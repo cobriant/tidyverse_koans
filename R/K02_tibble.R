@@ -1,5 +1,6 @@
 #-------------------------------------------------------------------------
 #            Intro to the Tidyverse by Colleen O'Briant
+#                          Koan #2: Tibbles
 #-------------------------------------------------------------------------
 
 # In order to progress:
@@ -15,38 +16,40 @@
 #                             Tibbles
 
   # In the previous section, we learned how to hold data in vectors.
-  # But real-world data is often held in 2 dimensional data frames like
-  # spreadsheets.
-
-  # To create a spreadsheet in R, you'll put your data into column
-  # vectors and use the function 'tibble()' to combine columns.
+  # But data usually comes to us in a table format (like a spreadsheet).
+  # Tibbles are tidyverse spreadsheets.
 
 #-------------------------------------------------------------------------
 
-# First, read the qelp docs on 'tibble()':
-
-?qelp::tibble
-
-# Then load the tidyverse to get started:
+# Load the tidyverse to get started:
 
 library(tidyverse)
 
 #-------------------------------------------------------------------------
 
-# 1. Let's create a small tibble that has some data on US GDP per capita
-# and life expectancy since 1957. Here's the data in written form:
+# To show you what a tibble is, I'll build one. Suppose I have some data
+# on US GDP per capita and life expectancy since 1957. Here's the data
+# in written form:
 
 # In 1957, US GDP per capita was $14,847 and life expectancy was 69.5 years.
 # In 1977, US GDP per capita was $24,073 and life expectancy was 73.4 years.
 # In 1997, US GDP per capita was $35,767 and life expectancy was 76.8 years.
 
+# Here's how to put that data into a tibble in R. Read this carefully and
+# run the code:
+
 US_data <- tibble(
-  year      = c(1957, 1977, 1997),
+  year = c(1957, 1977, 1997),
   gdpPercap = c(14847, 24073, 35767),
-  lifeExp   = c(69.5, 73.4, 76.8)
+  lifeExp = c(69.5, 73.4, 76.8)
 )
 
-# Then we get new data for 2017, so we'd like to add a row to the bottom:
+US_data
+
+# Notice that in order to build a tibble, you define vectors with 'c'
+# that become the columns of the table. The columns have names.
+
+# Now suppose we get new data for 2017. We'd like to add a row to the bottom:
 # In 2017, US GDP per capita was $60,062 and life expectancy was 78.5 years.
 
 # Fill in the blanks and run the code to save your tibble to your environment:
@@ -61,10 +64,15 @@ US_data <- tibble(
 
 #@1
 
-# Tibbles have just 2 rules to follow:
-#  1. Each column must be the same length (columns have 4 elements here),
-#  2. Each column must be named ('year', 'gdpPercap', and 'lifeExp' are
-#     the names here).
+# Tibbles are pretty strict. They have 2 rules you must follow:
+#  1. Each column must be named ('year', 'gdpPercap', and 'lifeExp' are
+#     the names here). If you try to define a column without giving it
+#     a name, 'tibble' will come up with the name for you.
+#  2. Each column must have the same number of rows (each column vector
+#     has 4 elements, so each column vector has 4 rows, and the tibble
+#     has 4 rows). If you try to define a column that's shorter than the
+#     others, 'tibble' will either recycle the values of that column to
+#     make it long enough, or it will throw an error.
 
 #-------------------------------------------------------------------------
 
@@ -104,14 +112,21 @@ nrow(US_data)
 ?qelp::nrow
 ?qelp::ncol
 
+# In a tibble, columns are called variables. Rows are called observations.
+# This is very important. Think about it and remember it.
+
 #-------------------------------------------------------------------------
 
-# 3. You can get the column names of a tibble using 'names()'
+# 3. You can get the column names (variable names) of a tibble using 'names()'
 #3@
 
 # names(US_data) == c("year", "gdpPercap", __)
 
 #@3
+
+# Make sure to read the qelp docs for 'tibble':
+?qelp::tibble
+
 #-------------------------------------------------------------------------
 
 # Great work! You're one step closer to tidyverse enlightenment.

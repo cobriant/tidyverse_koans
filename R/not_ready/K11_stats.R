@@ -1,10 +1,15 @@
-# Intro to the Tidyverse by Colleen O'Briant
+#-------------------------------------------------------------------------
+#            Intro to the Tidyverse by Colleen O'Briant
+#                      Koan #11: Stats in R
+#-------------------------------------------------------------------------
 
-# In order to progress, all you need to do is fill in the blanks: __.
-# Then run the code to make sure you're getting the desired result.
-# Use hotkeys for this: highlight the code you want to run, or put
-# your cursor at the end of the line. Then hit command + enter on a
-# mac, or ctrl + enter on windows.
+# In order to progress:
+# 1. Read all instructions carefully.
+# 2. When you come to an exercise, fill in the blank and remove the hashtag
+#    (Ctrl/Cmd Shift C) to execute the code in the console (Ctrl/Cmd Return).
+#    If the piece of code spans multiple lines, highlight the whole chunk
+#    or simply put your cursor at the end of the last line.
+# 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 
 #-------------------------------------------------------------------------
 
@@ -81,22 +86,38 @@ ggplot() +
 # 1. Generate 8 random numbers from the t distribution with 55 degrees of
 # freedom.
 
+#1@
+
 # __
+
+#@1
 
 # --- dt() ---------------------------------------------------------------
 # 2. Draw the t distribution (with 55 degrees of freedom) in a ggplot.
 
+#2@
+
 # __
+
+#@2
 
 # --- qt() ----------------------------------------------------------------
 # 3. Is a test statistic of 2.2 in the accept region or the reject region?
 # Conduct a two-sided test at the 5% level using 55 degrees of freedom.
 
+#3@
+
 # __
+
+#@3
 
 # --- 4. Visualize the hypothesis test using ggplot: ----------------------
 
+#4@
+
 # __
+
+#@4
 
 #-------------------------------------------------------------------------
 # --- The F distribution -------------------------------------------------
@@ -109,23 +130,39 @@ ggplot() +
 # 5. Generate 10 random numbers from the F distribution with 10 degrees of
 # freedom in the numerator and 20 degrees of freedom in the denominator.
 
+#5@
+
 # __
+
+#@5
 
 # --- df() ---------------------------------------------------------------
 # 6. Draw the F distribution in a ggplot. Continue to use the degrees of
 # freedom in question 5.
 
+#6@
+
 # __
+
+#@6
 
 # --- qf() ----------------------------------------------------------------
 # 7. Is a test statistic of 2.2 in the accept region or the reject region?
 # Perform a one-tailed test at the 5% level.
 
+#7@
+
 # __
+
+#@7
 
 # --- 8. Visualize the hypothesis test using ggplot: ----------------------
 
+#8@
+
 # __
+
+#@8
 
 
 #-------------------------------------------------------------------------
@@ -139,26 +176,42 @@ ggplot() +
 # 9. Generate 10 random numbers from the chi-square distribution with 4
 # degrees of freedom.
 
+#9@
+
 # __
+
+#@9
 
 
 # --- dchisq() -----------------------------------------------------------
 # 10. Draw the Chi-square distribution in a ggplot. Continue to use the
 # degrees of freedom in question 9.
 
+#10@
+
 # __
+
+#@10
 
 
 # --- qchisq() -------------------------------------------------------------
 # 11. Is a test statistic of 13 in the accept region or the reject region
 #  for a 95% one-tailed test?
 
+#11@
+
 # __
+
+#@11
 
 
 # --- 12. Visualize the hypothesis test using ggplot: ----------------------
 
+#12@
+
 # __
+
+#@12
 
 
 #-------------------------------------------------------------------------

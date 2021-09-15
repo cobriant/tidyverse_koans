@@ -1,5 +1,6 @@
 #-------------------------------------------------------------------------
 #            Intro to the Tidyverse by Colleen O'Briant
+#                          Koan #3: Piping
 #-------------------------------------------------------------------------
 
 # In order to progress:
@@ -151,4 +152,4 @@ print(US_data)
 # Great work! You're one step closer to tidyverse enlightenment.
 # Make sure to return to this topic to meditate on it later.
 
-# If you're ready, you can move on to the next koan: qplot.
+# If you're ready, you can move on to the next koan: filter, select, and mutate.
