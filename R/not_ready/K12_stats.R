@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------
 #            Intro to the Tidyverse by Colleen O'Briant
-#                      Koan #11: Stats in R
+#                      Koan #12: Stats in R
 #-------------------------------------------------------------------------
 
 # In order to progress:

@@ -1,10 +1,15 @@
-# Intro to the Tidyverse by Colleen O'Briant
+#-------------------------------------------------------------------------
+#            Intro to the Tidyverse by Colleen O'Briant
+#               Koan #14: Functions that use dplyr
+#-------------------------------------------------------------------------
 
-# In order to progress, all you need to do is fill in the blanks: __.
-# Then run the code to make sure you're getting the desired result.
-# Use hotkeys for this: highlight the code you want to run, or put
-# your cursor at the end of the line. Then hit command + enter on a
-# mac, or ctrl + enter on windows.
+# In order to progress:
+# 1. Read all instructions carefully.
+# 2. When you come to an exercise, fill in the blank and remove the hashtag
+#    (Ctrl/Cmd Shift C) to execute the code in the console (Ctrl/Cmd Return).
+#    If the piece of code spans multiple lines, highlight the whole chunk
+#    or simply put your cursor at the end of the last line.
+# 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 
 #-------------------------------------------------------------------------
 
@@ -13,11 +18,11 @@
 #  If you want to write a custom function that uses one of the 7 dplyr
 #  verbs (filter, select, mutate, summarize, group_by, arrange, and slice),
 #  you many run into trouble because of something in R called nonstandard
-#  evaluation. Nonstandard evaluation is something that usually makes our
-#  lives easier, but sometimes causes problems. This is one of those times
-#  where it causes problems. So I won't try to explain nonstandard
-#  evaluation in R here, but I'll give you some hints for avoiding errors
-#  when you're writing custom functions that use dplyr.
+#  evaluation, or lazy eval. Nonstandard evaluation is something that usually
+#  makes our lives easier, but sometimes causes problems. This is one of
+#  those times where it causes problems. So I won't try to explain lazy
+#  eval in R here, but I'll give you some hints for avoiding errors when
+#  you're writing custom functions that use dplyr.
 
 #-------------------------------------------------------------------------
 
@@ -67,14 +72,19 @@ grouped_summary2(data = gapminder, grouping_var = continent, summarize_var = gdp
 
 #----------------------------------------------------------------
 
-# 1. Your turn: write a function 'arrange_filter' that arranges
+# 1. You try: write a function 'arrange_filter' that arranges
 # a tibble by a certain variable and also filters by a logical condition.
 # Make sure to use the double brace syntax {{ var }} in the body
 # of the function.
 
+#1@
+
 # arrange_filter <- function(data, arrange_var, condition){
 #   __
 # }
+
+#@1
+
 
 # Test that your function works:
 

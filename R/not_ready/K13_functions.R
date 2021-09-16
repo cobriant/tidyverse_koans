@@ -1,16 +1,19 @@
-# Intro to the Tidyverse by Colleen O'Briant
+#-------------------------------------------------------------------------
+#            Intro to the Tidyverse by Colleen O'Briant
+#                   Koan #13: Custom Functions
+#-------------------------------------------------------------------------
 
-# In order to progress, all you need to do is fill in the blanks: __.
-# Then run the code to make sure you're getting the desired result.
-# Use hotkeys for this: highlight the code you want to run, or put
-# your cursor at the end of the line. Then hit command + enter on a
-# mac, or ctrl + enter on windows.
+# In order to progress:
+# 1. Read all instructions carefully.
+# 2. When you come to an exercise, fill in the blank and remove the hashtag
+#    (Ctrl/Cmd Shift C) to execute the code in the console (Ctrl/Cmd Return).
+#    If the piece of code spans multiple lines, highlight the whole chunk
+#    or simply put your cursor at the end of the last line.
+# 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 
 #-------------------------------------------------------------------------
 
-# Custom Functions
-
-  # In this exercise we'll learn how to write our own custom functions in R.
+# In this koan you'll learn how to write your own custom functions in R.
 
   # So far, we've learned about a lot of great functions that make data
   # analysis easy. For example, all these are functions:
@@ -41,7 +44,8 @@ library(gapminder)
 # underscores, but they should always start with a letter. It's also good
 # practice to avoid using common names for your functions so that your functions
 # have unique names. That is, if you plan on using 'dplyr::filter', don't create
-# a function named 'filter'.
+# a function named 'filter'. And if you plan on using 'c()' to create a vector,
+# don't name anything else 'c'.
 
 # 'arg1', 'arg2', and 'arg3' are the function arguments. You can have any
 # number of arguments, including zero.
@@ -63,11 +67,20 @@ plus(5, 3)
 # 1. Does it work on numbers? Fill in the blanks to make the code return
 # TRUE.
 
+#1@
+
 # plus(__, __) == 3
+
+#@1
+
 
 # 2. Does it work on vectors?
 
+#2@
+
 # plus(__, __) == c(4, 0, 1)
+
+#@2
 
 #-------------------------------------------------------------------------
 
@@ -76,22 +89,41 @@ plus(5, 3)
 #    So for example, 'square(6)' will return 36. You can name the argument
 #    anything you want (x, y, arg1, etc), as long as you're consistent.
 
+#3@
+
 # square <- function(__){
 #   __
 # }
 
+#@3
+
+
 # 4. Does it work on numbers?
+
+#4@
 
 # square(__) == 16
 
+#@4
+
+
 # 5. Does it work on vectors?
+
+#5@
 
 # square(__) == c(1, 4, 9)
 
-# Test that it works inside 'mutate()':
+#@5
 
-# gapminder %>%
-#   mutate(gdpPercap_squared = square(gdpPercap))
+
+# 6. Test that it works inside 'mutate()': Take 'gapminder' and add a new
+# variable 'gdpPercap_squared' that is the square of the gdpPercap variable.
+
+#6@
+
+# __
+
+#@6
 
 #-------------------------------------------------------------------------
 
@@ -124,33 +156,66 @@ plus_minus <- function(a, b){
 
 plus_minus(5, 2)
 
+# 7. Your turn: write a function that takes zero arguments and returns
+# the number 1 and also a number drawn from N(1, 1).
+
+#7@
+
+# ones <- function(){
+#   __
+# }
+
+# ones()
+
+#@7
+
 #-------------------------------------------------------------------------
 
-# You can even write a function that outputs a plot:
+# Your custom functions can output anything: a value, a vector, a tibble,
+# another function, and even a plot! Here's a function called 'scatterplot'
+# that outputs a ggplot with geom_point(). The curly braces that wrap
+# 'xaxis' and 'yaxis' will be explained in the next koan:
 
 scatterplot <- function(tibble, xaxis, yaxis){
     ggplot(data = tibble, aes(x = {{ xaxis }}, y = {{ yaxis }})) +
         geom_point()
 }
 
-# 6. Test that 'scatterplot' works using 'gapminder', any variable
+# 8. Test that 'scatterplot' works using 'gapminder', any variable
 # in 'gapminder' on the x-axis, and any variable in 'gapminder'
 # on the y-axis.
 
+#8@
+
 # scatterplot(__, __, __)
 
-# You can make arguments optional by setting default values for them.
+#@8
 
-scatterplot2 <- function(tibble, xaxis, yaxis, point_color = "pink", point_alpha = .5){
+
+# Lastly, I want to mention that function arguments can have
+# default values. For instance, geom_point() dots have color = black
+# if you don't change the color. And the geom_smooth() line is blue
+# by default. Suppose I want my points in my scatterplot to be pink
+# by default. Here's how I can do that:
+
+scatter_pink <- function(tibble, xaxis, yaxis, point_color = "pink"){
     ggplot(data = tibble, aes(x = {{ xaxis }}, y = {{ yaxis }})) +
-        geom_point(color = point_color, alpha = point_alpha)
+        geom_point(color = point_color)
 }
 
-# 7. Test that scatterplot2 works with 'gapminder'.
+# If I don't declare a point_color, my scatterplot ends up being pink:
 
-# scatterplot2(__, __, __, __, __)
+scatter_pink(gapminder, gdpPercap, lifeExp)
 
-# 8. If you don't specify a point_color, what color will the points be?
+# But if I do declare a point_color, my scatterplot becomes that color.
+
+# 9. Use 'scatter_pink' to draw a gapminder scatterplot with *blue* points.
+
+#9@
+
+# scatter_pink(__, __, __, __)
+
+#@9
 
 #----------------------------------------------------------------
 
