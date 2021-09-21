@@ -16,37 +16,37 @@
 # In this koan, you'll learn the first three dplyr verbs: 'filter', 'select',
 # and 'mutate'.
 
-  #  dplyr is a package for data manipulation (the name is supposed to
-  #  evoke "data pliers"). It's included in the tidyverse, so you
-  #  automatically have access to all the dplyr functions whenever you attach
-  #  the tidyverse with 'library(tidyverse)'.
+#  dplyr is a package for data manipulation (the name is supposed to
+#  evoke "data pliers"). It's included in the tidyverse, so you
+#  automatically have access to all the dplyr functions whenever you attach
+#  the tidyverse with 'library(tidyverse)'.
 
-  # dplyr is a SQL implementation. What is SQL? It stands for "Structured
-  # Query Language": it's a programming language for answering questions
-  # ("queries") about a dataset. With SQL (and with dplyr), you can transform
-  # your data into a neat table of results to answer just about any question
-  # you have about your data!
+# dplyr is a SQL implementation. What is SQL? It stands for "Structured
+# Query Language": it's a programming language for answering questions
+# ("queries") about a dataset. With SQL (and with dplyr), you can transform
+# your data into a neat table of results to answer just about any question
+# you have about your data!
 
-  # As we'll see in this exercise and the next, you can use dplyr on a
-  # basic demographic dataset to answer questions like...
-     # What were the 5 richest countries in the 1950s?
-     # Which continent has the highest life expectancy on average?
-     # What year did Mexico have the highest population growth?
+# As we'll see in this exercise and the next, you can use dplyr on a
+# basic demographic dataset to answer questions like...
+# What were the 5 richest countries in the 1950s?
+# Which continent has the highest life expectancy on average?
+# What year did Mexico have the highest population growth?
 
-  # SQL is wonderful because in order to answer all these questions, you
-  # only need to learn 7 functions! dplyr is the same way, except dplyr is
-  # EVEN MORE wonderful because, where SQL is very *structured*, dplyr is
-  # not. You can use the 7 dplyr functions in whichever order makes the
-  # most sense.
+# SQL is wonderful because in order to answer all these questions, you
+# only need to learn 7 functions! dplyr is the same way, except dplyr is
+# EVEN MORE wonderful because, where SQL is very *structured*, dplyr is
+# not. You can use the 7 dplyr functions in whichever order makes the
+# most sense.
 
-  # In this exercise, we'll learn the first 3 dplyr functions:
-  # 'filter()', 'select()', and 'mutate()'.
+# In this exercise, we'll learn the first 3 dplyr functions:
+# 'filter()', 'select()', and 'mutate()'.
 
-  # In the next exercise, we'll learn two more:
-  # 'summarize()' and 'group_by()'.
+# In the next exercise, we'll learn two more:
+# 'summarize()' and 'group_by()'.
 
-  # Finally, we'll finish up by learning the last two:
-  # 'arrange()' and 'slice()'.
+# Finally, we'll finish up by learning the last two:
+# 'arrange()' and 'slice()'.
 
 #-------------------------------------------------------------------------
 

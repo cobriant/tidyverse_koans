@@ -113,7 +113,7 @@ gapminder %>%
 
 
 # 4. Summarize 'gapminder' to find the mean GDP per capita for each
-# continent, for each year (use 2 grouping variables).
+# continent, for each year (use 2 variables inside 'group_by').
 
 #4@
 
