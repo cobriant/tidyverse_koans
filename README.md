@@ -34,7 +34,7 @@ Tools > Modify keyboard shortcuts > Run a test file > Ctrl Shift T
 - [x] 9: ggplot aesthetic mappings
 - [x] 10: ggplot geoms
 - [x] 11: lm
-- [ ] 12: stats in R
+- [x] 12: stats in R
 - [ ] 13: custom functions
 - [ ] 14: custom functions that use dplyr
 - [ ] 15: map
