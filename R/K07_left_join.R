@@ -32,6 +32,7 @@ income <- read_csv("https://raw.githubusercontent.com/cobriant/dplyrmurdermyster
 
 # Un-comment the code below (Ctrl/Cmd Shift C) to run and take a look at the
 # 'people' dataset:
+
 # view(people)
 
 # To find information about someone named Daniel Dumire, we can filter()

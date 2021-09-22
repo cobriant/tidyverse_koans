@@ -15,7 +15,7 @@
 
 #                             Tibbles
 
-  # In the previous section, we learned how to hold data in vectors.
+  # In the previous koan, we learned how to hold data in vectors.
   # But data usually comes to us in a table format (like a spreadsheet).
   # Tibbles are tidyverse spreadsheets.
 
@@ -96,6 +96,11 @@ US_data
 
 # view(US_data)
 
+# Un-comment this line of code with Ctrl/Cmd Shift C. Then after running it,
+# re-comment it using the same hotkeys. Why did I comment out view()?
+# It doesn't play nicely with my koan tests (it opens a view tab each test,
+# which will be slow and painful for you).
+
 #-------------------------------------------------------------------------
 
 # 2. Use the functions 'nrow()' and 'ncol' to find the dimensions of the
@@ -104,20 +109,23 @@ US_data
 nrow(US_data)
 
 # How many columns does US_data have?
+
 #2@
 
 # ncol(US_data) == __
 
 #@2
+
 ?qelp::nrow
 ?qelp::ncol
 
-# In a tibble, columns are called variables. Rows are called observations.
+# In a tibble, columns are called *variables*. Rows are called *observations*.
 # This is very important. Think about it and remember it.
 
 #-------------------------------------------------------------------------
 
-# 3. You can get the column names (variable names) of a tibble using 'names()'
+# 3. You can get the column names (variable names) of a tibble using 'names()':
+
 #3@
 
 # names(US_data) == c("year", "gdpPercap", __)
