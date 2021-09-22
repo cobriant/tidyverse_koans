@@ -57,7 +57,7 @@ library(tidyverse)
 # so you don't keep installing it.
 # install.packages("gapminder")
 library(gapminder)
-view(gapminder)
+# view(gapminder)
 
 #--- filter --------------------------------------------------------------
 

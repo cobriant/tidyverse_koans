@@ -55,7 +55,7 @@ library(gapminder)
 
 # 1. Use a named function as `.f`:
 
-#1@
+#01@
 
 # multiply_by_three <- function(a){
 #   __
@@ -63,25 +63,25 @@ library(gapminder)
 #
 # map(.x = 1:5, .f = multiply_by_three)
 
-#@1
+#@01
 
 
 # 2. Use an anonymous function as '.f':
 
-#2@
+#02@
 
 # map(.x = 1:5, .f = function(a) __)
 
-#@2
+#@02
 
 
 # 3. Use a formula as '.f':
 
-#3@
+#03@
 
 # map(.x = 1:5, .f = ~ __ )
 
-#@3
+#@03
 
 #-------------------------------------------------------------------------
 
@@ -96,21 +96,21 @@ library(gapminder)
 #    x should take values from 1 to 10.
 #    y should be 3 + 2*x + u, where u is iid N(0, 1).
 
-#4@
+#04@
 
 # tibble(
 #   x = sample(1:10, size = 10000, replace = T),
 #   y = __ + __*x + __
 # )
 
-#@4
+#@04
 
 
 # 5. Take the dataset you defined above and add a new variable:
 #    `x_observed`. It should be x + a measurement error, which we'll
 #    say is distributed N(0, 0.5).
 
-#5@
+#05@
 
 # tibble(
 #   x = sample(1:10, size = 10000, replace = T),
@@ -118,7 +118,7 @@ library(gapminder)
 #   x_observed = __
 # )
 
-#@5
+#@05
 
 
 # 6. Take the dataset you defined above and use lm() to estimate
@@ -129,7 +129,7 @@ library(gapminder)
 # Do you still get estimates for the effect of x on y that is close
 # to 2, or do the estimates seem biased?
 
-#6@
+#06@
 
 # tibble(
 #   x = sample(1:10, size = 10000, replace = T),
@@ -139,7 +139,7 @@ library(gapminder)
 #   lm(__, data = .) %>%
 #   broom::tidy()
 
-#@6
+#@06
 
 
 # 7. In this step, we'll use 'map(.x, .f)' to generate 100
@@ -153,7 +153,7 @@ library(gapminder)
         # - Runs a regression of x_observed on y,
         # - And outputs the estimate for the effect of x_observed on y.
 
-#7@
+#07@
 
 # map(
 #   .x = __,
@@ -168,7 +168,7 @@ library(gapminder)
 #   }
 # )
 
-#@7
+#@07
 
 
 # 8. In the last step, you should have created a long list
@@ -176,7 +176,7 @@ library(gapminder)
 # The only difference is that 'map_dfr' will output a dataframe
 # instead of a list.
 
-#8@
+#08@
 
 # map_dfr(
 #   .x = __,
@@ -191,7 +191,7 @@ library(gapminder)
 #   }
 # )
 
-#@8
+#@08
 
 
 # 9. Now that we have a dataframe of simulation results,
@@ -199,7 +199,7 @@ library(gapminder)
 # geom_density() to visualize the distribution of estimates
 # you calculated.
 
-#9@
+#09@
 
 # map_dfr(
 #   .x = __,
@@ -217,7 +217,7 @@ library(gapminder)
 #   geom_density(color = "forestgreen", fill = "forestgreen", alpha = .5) +
 #   geom_vline(xintercept = 2)
 
-#@9
+#@09
 
 
 # 10. What if the researcher had access to 'x' instead of 'x_observed'?

@@ -34,14 +34,14 @@ library(gapminder)
 # capita be expected to boost that country's life expectancy?
 # Recall the lm() syntax is: lm(y ~ x, data = gapminder)
 
-#1@
+#01@
 
 # lm(__)
 
 # A $1 increase to a country's GDP per capita can be associated with a
 # __ year increase in life expectancy.
 
-#@1
+#@01
 
 
 # lm() prints very limited information. Usually we'd at least
@@ -54,7 +54,7 @@ library(gapminder)
 # `broom::tidy(conf.int = TRUE)`. Is the coefficient on
 # `gdpPercap` greater than 0 at the 1% level?
 
-#2@
+#02@
 
 # lm(__) %>%
 #   broom::tidy(conf.int = TRUE)
@@ -62,20 +62,20 @@ library(gapminder)
 # The coefficient on `gdpPercap` __ greater than 0 at the 1% level.
 # (In the blank above, write "is" or "is not".)
 
-#@2
+#@02
 
 
 # 3. To see the regression's r-squared, pipe the lm() call
 # into `broom::glance()`.
 
-#3@
+#03@
 
 # lm(__) %>%
 #   broom::glance()
 
 # This model explains __% of the variation in lifeExp.
 
-#@3
+#@03
 
 #-------------------------------------------------------------------------
 
@@ -86,24 +86,24 @@ library(gapminder)
 # 4. Pipe the simple regression into fitted.values() to get a vector
 # of length 1704 (the same length as the number of rows of gapminder).
 
-#4@
+#04@
 
 # lm(__) %>%
 #   __
 
-#@4
+#@04
 
 
 # 5. Pipe the simple regression into residuals() to get another vector
 # of length 1704. Recall that the fitted values plus the residuals will
 # be equal to the observed values for lifeExp.
 
-#5@
+#05@
 
 # lm(__) %>%
 #   __
 
-#@5
+#@05
 
 #-------------------------------------------------------------------------
 
@@ -114,29 +114,26 @@ library(gapminder)
 # variable by wrapping the variable names in the function log():
 #   lm(log(y) ~ log(x), data = gapminder).
 
-#6@
+#06@
 
 # lm(__) %>%
 #   broom::tidy(conf.int = TRUE)
 
 # When GDP per capita increases by 1%, life expectancy will increase by __%.
 
-#@6
+#@06
 
 
 # 7. Instead of applying log() to both the dependent and explanatory
 # variable, apply it only to the explanatory variable. Does the R-squared
 # improve?
 
-#7@
+#07@
 
 # lm(__) %>%
-#   broom::tidy(conf.int = TRUE)
+#   broom::glance()
 
-# When GDP per capita increases by 1%, life expectancy will increase by __ years.
-# This model explains __% of the variation in lifeExp.
-
-#@7
+#@07
 
 
 # 8. Instead of doing a log transformation, try taking the square
@@ -147,14 +144,14 @@ library(gapminder)
 # Does a log transformation, square transformation, or no transformation
 # at all of gdpPercap seem to be the best fit?
 
-#8@
+#08@
 
 # lm(__) %>%
 #   broom::glance()
 
 # This model explains __% of the variation in lifeExp.
 
-#@8
+#@08
 
 #-------------------------------------------------------------------------
 
@@ -162,15 +159,16 @@ library(gapminder)
 #    lm(y ~ 0 + x, data = gapminder). Take the simple regression and omit
 #    the intercept.
 
-#9@
+#09@
 
 # lm(__) %>%
 #   broom::tidy(conf.int = TRUE)
 
-#@9
+#@09
 
 
-# 10. Add a second explanatory variable: 'year'.
+# 10. Take the simple regression we've been working on
+# and add a second explanatory variable: 'year'.
 
 #10@
 
@@ -204,8 +202,6 @@ library(gapminder)
 
 # Our model predicts that a country in Asia with $0 GDP per capita
 # will have a life expectancy of __ years.
-
-#
 
 #@11
 

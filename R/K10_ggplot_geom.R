@@ -35,7 +35,7 @@ library(gapminder)
 
 # 1. Draw a histogram to visualize lifeExp using geom_histogram().
 
-#1@
+#01@
 
 # ggplot(
 #   data = gapminder,
@@ -43,11 +43,11 @@ library(gapminder)
 #   ) +
 #   __
 
-#@1
+#@01
 
 # 2. Experiment with different binwidths for your histogram.
 
-#2@
+#02@
 
 # ggplot(
 #   data = gapminder,
@@ -55,7 +55,7 @@ library(gapminder)
 #   ) +
 #   __(binwidth = __)
 
-#@2
+#@02
 
 #--- geom_freqpoly -------------------------------------------------------
 
@@ -63,48 +63,48 @@ library(gapminder)
 # of bars to communicate the number of observations in each bin. Again,
 # experiment with binwidth.
 
-#3@
+#03@
 
 # ggplot(
 #   data = gapminder, aes(x = lifeExp, color = continent)
 #   ) +
 #   __(binwidth = __)
 
-#@3
+#@03
 
 #--- geom_area -----------------------------------------------------------
 
 # 4. Make a filled frequency polygon using an area plot: geom_area(). In
 # the blank, experiment with setting 'color' versus 'fill' as 'continent'.
 
-#4@
+#04@
 
 # ggplot(data = gapminder, aes(x = lifeExp, __ = continent)) +
 #   geom_area(stat = "bin")
 
-#@4
+#@04
 
 # 5. Notice that the continents are stacked up on top of each other in
 # the previous plot. To change that behavior, set position = "dodge".
 
-#5@
+#05@
 
 # ggplot(data = gapminder, aes(x = lifeExp, fill = continent)) +
 #   geom_area(stat = "bin", position = __)
 
-#@5
+#@05
 
 # 6. The issue now is that there's overplotting. Data for the Americas
 # is totally hidden behind the other continents! One way to fix this is
 # to adjust the transparency of points through 'alpha'. Setting 'alpha = .5'
 # reduces the 'geom' transparency to 50%. Experiment with different alphas.
 
-#6@
+#06@
 
 # ggplot(data = gapminder, aes(x = lifeExp, fill = continent)) +
 #   geom_area(stat = "bin", position = "dodge", alpha = __)
 
-#@6
+#@06
 
 #--- geom_density --------------------------------------------------------
 
@@ -116,21 +116,21 @@ library(gapminder)
 
 # 7. Experiment with setting 'color' and 'fill' to 'continent'.
 
-#7@
+#07@
 
 # ggplot(data = gapminder, aes(x = lifeExp, __)) +
 #   __()
 
-#@7
+#@07
 
-# 8 Also experiment with different 'alpha's.
+# 8 With geom_density and fill, experiment with different alpha's.
 
-#8@
+#08@
 
 # ggplot(data = gapminder, aes(x = lifeExp, __)) +
 #   __(alpha = __)
 
-#@8
+#@08
 
 #-------------------------------------------------------------------------
 
@@ -147,13 +147,13 @@ library(gapminder)
 #     (and for a horizontal line, you'd need to specify a y-intercept).
 #     Do this with 'xintercept = 70'.
 
-#9@
+#09@
 
 # ggplot(data = gapminder, aes(x = lifeExp, color = continent, fill = continent)) +
 #   geom_density(alpha = .3) +
 #   __
 
-#@9
+#@09
 
 
 # 10. Include the vertical line you did above, and also note how the
@@ -178,12 +178,12 @@ library(gapminder)
 # My favorite 'geom's for plots comparing a variable on the x-axis to a
 # variable on the y-axis:
 
-  # geom_point()
-  # geom_smooth()
-  # geom_line()
-  # geom_hex()
-  # geom_boxplot()
-  # geom_violin()
+# geom_point()
+# geom_smooth()
+# geom_line()
+# geom_hex()
+# geom_boxplot()
+# geom_violin()
 
 #-------------------------------------------------------------------------
 
@@ -232,7 +232,8 @@ library(gapminder)
 # applying a log transformation to gdpPercap.
 
 # 15. Instead of plotting 'gdpPercap' on the x-axis, plot the log of
-# 'gdpPercap' using log().
+# 'gdpPercap' using log(). You should find that a linear model seems
+# to fit this transformation much better.
 
 #15@
 
@@ -324,7 +325,7 @@ ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
 ggplot(
   data = gapminder,
   aes(x = log(gdpPercap), y = lifeExp)
-  ) +
+) +
   geom_point(aes(color = continent)) +
   geom_density2d(color = "grey", alpha = .5) +
   facet_wrap(~ year)

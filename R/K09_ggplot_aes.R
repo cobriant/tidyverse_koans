@@ -163,12 +163,12 @@ ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
 #    Add 2 'aes' to this plot: map 'continent' to 'color', and map 'pop'
 #    to 'size'. How many legends are there now?
 
-#4@
+#5@
 
 # ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
 #   geom_point(__)
 
-#@4
+#@5
 
 #-------------------------------------------------------------------------
 

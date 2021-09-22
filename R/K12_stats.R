@@ -20,8 +20,7 @@
 # hypothesis testing.
 
 # In the three sections that follow, you'll practice the same thing but
-# with the t distribution, the F distribution, and the Chi-square
-# distribution.
+# with the t distribution and the F distribution.
 
 # Run this code to get started:
 
@@ -50,7 +49,7 @@ ggplot() +
     fun = dnorm,
     args = list(mean = 0, sd = 1),
     geom = "line"
-    ) +
+  ) +
   xlim(-5, 5)
 
 # --- qnorm() ------------------------------------------------------------
@@ -86,38 +85,38 @@ ggplot() +
 # 1. Generate 8 random numbers from the t distribution with 55 degrees of
 # freedom.
 
-#1@
+#01@
 
 # __
 
-#@1
+#@01
 
 # --- dt() ---------------------------------------------------------------
 # 2. Draw the t distribution (with 55 degrees of freedom) in a ggplot.
 
-#2@
+#02@
 
 # __
 
-#@2
+#@02
 
 # --- qt() ----------------------------------------------------------------
 # 3. Is a test statistic of 2.2 in the accept region or the reject region?
 # Conduct a two-sided test at the 5% level using 55 degrees of freedom.
 
-#3@
+#03@
 
 # __
 
-#@3
+#@03
 
 # --- 4. Visualize the hypothesis test using ggplot: ----------------------
 
-#4@
+#04@
 
 # __
 
-#@4
+#@04
 
 #-------------------------------------------------------------------------
 # --- The F distribution -------------------------------------------------
@@ -130,89 +129,39 @@ ggplot() +
 # 5. Generate 10 random numbers from the F distribution with 10 degrees of
 # freedom in the numerator and 20 degrees of freedom in the denominator.
 
-#5@
+#05@
 
 # __
 
-#@5
+#@05
 
 # --- df() ---------------------------------------------------------------
 # 6. Draw the F distribution in a ggplot. Continue to use the degrees of
 # freedom in question 5.
 
-#6@
+#06@
 
 # __
 
-#@6
+#@06
 
 # --- qf() ----------------------------------------------------------------
 # 7. Is a test statistic of 2.2 in the accept region or the reject region?
 # Perform a one-tailed test at the 5% level.
 
-#7@
+#07@
 
 # __
 
-#@7
+#@07
 
 # --- 8. Visualize the hypothesis test using ggplot: ----------------------
 
-#8@
+#08@
 
 # __
 
-#@8
-
-
-#-------------------------------------------------------------------------
-# --- The Chi-square distribution ----------------------------------------
-# ------------------------------------------------------------------------
-
-#  Read the help docs here:
-?rchisq
-
-# --- rchisq() -----------------------------------------------------------
-# 9. Generate 10 random numbers from the chi-square distribution with 4
-# degrees of freedom.
-
-#9@
-
-# __
-
-#@9
-
-
-# --- dchisq() -----------------------------------------------------------
-# 10. Draw the Chi-square distribution in a ggplot. Continue to use the
-# degrees of freedom in question 9.
-
-#10@
-
-# __
-
-#@10
-
-
-# --- qchisq() -------------------------------------------------------------
-# 11. Is a test statistic of 13 in the accept region or the reject region
-#  for a 95% one-tailed test?
-
-#11@
-
-# __
-
-#@11
-
-
-# --- 12. Visualize the hypothesis test using ggplot: ----------------------
-
-#12@
-
-# __
-
-#@12
-
+#@08
 
 #-------------------------------------------------------------------------
 

@@ -15,19 +15,19 @@
 
 # Exercise 8: qplot() to ggplot()
 
-  # The tidyverse ecosystem has 2 great ways to draw plots: they are
-  # qplot() and ggplot(). You've already had some practice drawing qplots
-  # in project 1. qplot() was designed to be a simplified version of
-  # ggplot(), so you already have a head start with learning ggplot()!
+# The tidyverse ecosystem has 2 great ways to draw plots: they are
+# qplot() and ggplot(). You've already had some practice drawing qplots
+# in project 1. qplot() was designed to be a simplified version of
+# ggplot(), so you already have a head start with learning ggplot()!
 
-  # What's with the name?
-  # The double g's in 'ggplot' stand for the "grammar of graphics". The
-  # idea is that you shouldn't have to memorize tons of details about
-  # how a plotting tool works in order to create the right visualization
-  # for your data.
-  # Instead, your plotting tool should work like a language in itself.
-  # Once you understand how to speak the language, you can start building
-  # your own visualizations to communicate your unique ideas very fast.
+# What's with the name?
+# The double g's in 'ggplot' stand for the "grammar of graphics". The
+# idea is that you shouldn't have to memorize tons of details about
+# how a plotting tool works in order to create the right visualization
+# for your data.
+# Instead, your plotting tool should work like a language in itself.
+# Once you understand how to speak the language, you can start building
+# your own visualizations to communicate your unique ideas very fast.
 
 #-------------------------------------------------------------------------
 
