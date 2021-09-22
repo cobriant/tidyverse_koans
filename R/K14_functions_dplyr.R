@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------
+function(){#--------------------------------------------------------------
 #            Intro to the Tidyverse by Colleen O'Briant
 #               Koan #14: Functions that use dplyr
 #-------------------------------------------------------------------------
@@ -49,7 +49,7 @@ grouped_summary <- function(data, grouping_var, summarize_var){
       )
 }
 
-grouped_summary(data = gapminder, grouping_var = year, summarize_var = lifeExp)
+# grouped_summary(data = gapminder, grouping_var = year, summarize_var = lifeExp)
 
 # Our function finds the 'gapminder' dataset, but it can't find 'year'
 # or 'lifeExp', because it doesn't know that those are variables *in*
@@ -79,18 +79,21 @@ grouped_summary2(data = gapminder, grouping_var = continent, summarize_var = gdp
 
 #1@
 
-# arrange_filter <- function(data, arrange_var, condition){
-#   __
-# }
+# arrange_filter <- __
 
 #@1
 
 
-# Test that your function works:
+# 2. Test that your function works by running this code:
+
+#2@
 
 # arrange_filter(gapminder, gdpPercap, continent == "Europe")
+
+#@2
 
 #----------------------------------------------------------------
 
 # Great work! You're one step closer to tidyverse enlightenment.
 # Make sure to return to this topic to meditate on it later.
+}
