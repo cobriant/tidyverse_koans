@@ -6,9 +6,9 @@
 # In order to progress:
 # 1. Read all instructions carefully.
 # 2. When you come to an exercise, fill in the blank, un-comment the line,
-#    and execute the code in the console (Ctrl Return on Mac, Cmd Return
-#    on Windows). If the piece of code spans multiple lines, highlight the
-#    whole chunk or simply put your cursor at the end of the last line.
+#    and execute the code in the console (Ctrl/Cmd Return). If the piece
+#    of code spans multiple lines, highlight the whole chunk or simply put
+#    your cursor at the end of the last line.
 # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 # 4. Save (Ctrl/Cmd S).
 
@@ -16,16 +16,15 @@
 # It also reinforces good habits like saving frequently, testing
 # frequently, and writing code in the source pane and checking it
 # as you go by dropping it down into the console without
-# copy-pasting. If you're using a Windows machine, use Cmd instead
-# of Ctrl:
+# copy-pasting.
 
-#   * Save your script: Ctrl S
-#   * Execute selected code in the console: Ctrl Return
-#   * Test your answers: Ctrl Shift T
-#   * Comment/Uncomment lines: Ctrl Shift C
-#   * Move your cursor to the beginning of the line: Ctrl A
-#   * Move your cursor to the end of the line: Ctrl E
-#   * Use Spin to knit your script to html: Ctrl Shift K
+#   * Save your script: Ctrl/Cmd S
+#   * Execute selected code in the console: Ctrl/Cmd Return
+#   * Test your answers: Ctrl/Cmd Shift T
+#   * Comment/Uncomment lines: Ctrl/Cmd Shift C
+#   * Move your cursor to the beginning of the line: Ctrl/Cmd A
+#   * Move your cursor to the end of the line: Ctrl/Cmd E
+#   * Use Spin to knit your script to html: Ctrl/Cmd Shift K
 
 #-------------------------------------------------------------------------
 
