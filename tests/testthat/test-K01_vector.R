@@ -37,7 +37,7 @@ test_that("K01: Question 3e", {
 
 test_that("K01: Question 4", {
   skip_incomplete(K01, 4)
-  expect_equal(parse_eval(str_match_q(K01, 4)), T)
+  expect_equal(parse_eval(str_match_q(K01, 4)), c(T, T, T))
 })
 
 test_that("K01: Question 5", {
