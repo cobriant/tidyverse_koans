@@ -48,7 +48,7 @@ Tools > Modify keyboard shortcuts > Run a test file > Ctrl Shift T
 - [x] 14: custom functions that use dplyr
 - [x] 15: map
 - [x] 16: map_*
-- [ ] 17: lag
+- [x] 17: lag
 - [ ] 18: first differences
 - [ ] 19: reduce
 - [ ] 20: accumulate

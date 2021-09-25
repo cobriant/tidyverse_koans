@@ -22,8 +22,8 @@
 #   * Execute selected code in the console: Ctrl/Cmd Return
 #   * Test your answers: Ctrl/Cmd Shift T
 #   * Comment/Uncomment lines: Ctrl/Cmd Shift C
-#   * Move your cursor to the beginning of the line: Ctrl/Cmd A
-#   * Move your cursor to the end of the line: Ctrl/Cmd E
+#   * Move your cursor to the beginning of the line: Ctrl A
+#   * Move your cursor to the end of the line: Ctrl E
 #   * Use Spin to knit your script to html: Ctrl/Cmd Shift K
 
 #-------------------------------------------------------------------------
