@@ -1,6 +1,7 @@
 K04 <- read_file("../../R/K04_dplyr1.R")
 
 library(gapminder)
+library(tidyverse)
 
 test_that("K04: Question 1", {
   skip_incomplete(K04, 1)
@@ -24,7 +25,7 @@ test_that("K04: Question 4", {
 
 test_that("K04: Question 5", {
   skip_incomplete(K04, 5)
-  expect_equal(names(parse_eval(str_match_q(K04, 5))), c("year", "lifeExp", "pop"))
+  expect_equal(names(parse_eval(str_match_q(K04, 5))), c("lifeExp", "pop", "gdpPercap"))
 })
 
 test_that("K04: Question 6", {

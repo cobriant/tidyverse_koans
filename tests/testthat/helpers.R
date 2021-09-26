@@ -1,3 +1,4 @@
+library(gapminder)
 library(tidyverse)
 parse_eval <- function(string){
   eval(parse(text = string))

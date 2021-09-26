@@ -4,7 +4,7 @@ library(gapminder)
 
 test_that("K06: Question 1", {
   skip_incomplete(K06, 1)
-  expect_equal(parse_eval(str_match_q(K06, 1))[[1, 3]], 1992)
+  expect_equal(parse_eval(str_match_q(K06, 1))[[1, 3]], 1952)
 })
 
 test_that("K06: Question 2", {

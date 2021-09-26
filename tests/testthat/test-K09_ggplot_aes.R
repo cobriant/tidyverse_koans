@@ -15,8 +15,8 @@ test_that("K09: Question 2", {
 test_that("K09: Question 3", {
   skip_incomplete(K09, 3)
   p <- parse_eval(str_match_q(K09, 3))
-  expect_equal(p$labels$colour, "year")
-  expect_equal(p$labels$fill, "continent")
+  expect_equal(p$labels$colour, "continent")
+  expect_equal(p$labels$fill, "year")
 })
 
 test_that("K09: Question 4", {

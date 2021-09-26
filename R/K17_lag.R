@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------
+function(){#--------------------------------------------------------------
 #            Intro to the Tidyverse by Colleen O'Briant
 #                          Koan #17: lag()
 #-------------------------------------------------------------------------
@@ -119,3 +119,4 @@ library(gapminder)
 # Make sure to return to this topic to meditate on it later.
 
 # If you're ready, you can move on to the next koan: first differences.
+}
