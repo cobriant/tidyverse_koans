@@ -16,10 +16,15 @@ It's important to remember koans are not worksheets to be completed for speed. S
 #### 2. You'll need tidyverse, devtools, gapminder, and qelp
 
 `install.packages("tidyverse", dependencies = TRUE)`
+
 `library(tidyverse)`
+
 `install.packages("devtools")`
+
 `library(devtools)`
+
 `install.packages("gapminder")`
+
 `install_github("cobriant/qelp")`
 
 #### 3. Modify a keybinding for easy testing
