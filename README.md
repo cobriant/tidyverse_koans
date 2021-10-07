@@ -13,11 +13,13 @@ It's important to remember koans are not worksheets to be completed for speed. S
 
 #### 1. Clone this package (download the code) and open it in RStudio
 
-#### 2. You'll need devtools
+#### 2. You'll need devtools and gapminder
 
 `install.packages("devtools")`
 
 `library(devtools)`
+
+`install.packages("gapminder")`
 
 #### 3. Modify a keybinding for easy testing
 
