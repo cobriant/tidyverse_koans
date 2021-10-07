@@ -27,7 +27,7 @@ test_that("K07: Question 5", {
 
 test_that("K07: Question 6", {
   skip_incomplete(K07, 6)
-  expect_equal(parse_eval(str_match_q(K07, 6))[[1,7]], 68100)
+  expect_equal(parse_eval(str_match_q(K07, 6))[[1, "annual_income"]], 68100)
 })
 
 test_that("K07: Question 7", {
