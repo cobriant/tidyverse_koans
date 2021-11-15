@@ -40,25 +40,25 @@ Tools > Modify keyboard shortcuts > Run a test file > Ctrl Shift T
 
 # Outline
 
-- [x] 1: vectors
-- [x] 2: tibbles
-- [x] 3: piping
-- [x] 4: filter, select, mutate
-- [x] 5: summarize and group_by
-- [x] 6: arrange and slice
-- [x] 7: left_join
-- [x] 8: qplot to ggplot
-- [x] 9: ggplot aesthetic mappings
-- [x] 10: ggplot geoms
-- [x] 11: lm
-- [x] 12: stats in R
-- [x] 13: custom functions
-- [x] 14: custom functions that use dplyr
-- [x] 15: map
-- [x] 16: map_*
-- [x] 17: lag
-- [ ] 18: first differences
-- [ ] 19: reduce
-- [ ] 20: accumulate
+- 1: vectors
+- 2: tibbles
+- 3: piping
+- 4: filter, select, mutate
+- 5: summarize and group_by
+- 6: arrange and slice
+- 7: left_join
+- 8: qplot to ggplot
+- 9: ggplot aesthetic mappings
+- 10: ggplot geoms
+- 11: lm
+- 12: stats in R
+- 13: custom functions
+- 14: custom functions that use dplyr
+- 15: map
+- 16: map_*
+- 17: lag
+- 18: first differences
+- 19: reduce
+- 20: accumulate
 
 
