@@ -14,6 +14,8 @@
 
 #-------------------------------------------------------------------------
 
+library(tidyverse)
+
 # The last function we'll learn from the purrr family is accumulate().
 # accumulate() works just like `reduce` to sequentially apply a 2-argument
 # function to `.x`, but the difference is that accumulate() outputs the
