@@ -7,7 +7,9 @@ Koans are a great way to learn to program because:
   - The koans are self-paced
   - You're free to experiment in the console
   
-It's important to remember koans are not worksheets to be completed for speed. Studying koans is a slow, meditative journey toward tidyverse enlightenment.
+These koans are inspired by the spirit of the ruby/lisp/python/et al. koans, but they are tailored in every way for programming novices learning the tidyverse ecosystem. 
+
+My advice for beginners is that koans are not worksheets to be completed for speed. Studying koans is a slow, meditative journey toward tidyverse enlightenment.
 
 # Getting started
 
