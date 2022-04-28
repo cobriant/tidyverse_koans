@@ -1,8 +1,8 @@
-# tidyverse koans
+# Tidyverse Koans
 
 Koans are a great way to learn to program because:
 
-  - You're learning by doing (I can't overemphasize the importance of this one)
+  - You're learning by doing
   - You work in the development environment you'll use (R scripts in RStudio), not in a separate online environment like with Datacamp or LearnR
   - Feedback is immediate (Ctrl/Cmd Shift T to test your answers)
   - The koans are self-paced
@@ -11,6 +11,26 @@ Koans are a great way to learn to program because:
 These koans are inspired by the spirit of the ruby/lisp/python/et al. koans, but they are tailored in every way for programming novices learning the tidyverse ecosystem. 
 
 My advice for students is that koans are not worksheets to be completed for speed. Studying koans is a slow, meditative journey toward tidyverse enlightenment. Guess, skim, or rush, and you miss things. I'd recommend only doing 2-3 koans maximum in a single sitting.
+
+## Contents
+
+[What are students saying?](https://github.com/cobriant/tidyverse_koans#what-are-students-saying)
+
+[Can I use or adapt these koans for my course or lab?](https://github.com/cobriant/tidyverse_koans#can-I-use-or-adapt-these-koans-for-my-course-or-lab)
+
+[Getting Started](https://github.com/cobriant/tidyverse_koans#getting-started)
+
+[Outline](https://github.com/cobriant/tidyverse_koans#outline)
+
+# What are students saying?
+
+These koans work. Not to brag, but from my midterm evals:
+
+> This is very clearly the best taught economics course I have taken at UO. Your lectures are concise and understandable. You are incredibly intelligent, but I really appreciate how you explain the math and concepts in an approachable way. The most impressive aspect of the class, though, are the koans and your approach to coding. I feel like I have learned more R in the past three weeks than I did in all of 320. Thank you.
+
+# Can I use or adapt these koans for my course or lab?
+
+Absolutely, I would love that! I'd only ask for some sort of acknowledgment in your course materials.
 
 # Getting started
 
@@ -36,7 +56,6 @@ Macs:
 Tools > Modify keyboard shortcuts > Run a test file > Cmd Shift T (Ctrl Shift T on windows)
 
 #### 4. Open the first koan `R/K01_vector.R` and get to work!
-
 
 # Outline
 
