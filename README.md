@@ -52,7 +52,6 @@ Absolutely, I would love that! I'd only ask for some sort of acknowledgment in y
 
 #### 3. Modify a keybinding for easy testing
 
-Macs:
 Tools > Modify keyboard shortcuts > Run a test file > Cmd Shift T (Ctrl Shift T on windows)
 
 #### 4. Open the first koan `R/K01_vector.R` and get to work!
