@@ -58,7 +58,7 @@ library(devtools)
 install_github("cobriant/qelp")
 
 # Run this:
-?qelp::install.package
+?qelp::install.packages
 
 # If everything went right, the help docs I wrote on the function `install.packages` should pop up in the lower right hand pane.
 ```
