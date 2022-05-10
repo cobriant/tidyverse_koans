@@ -18,7 +18,7 @@ There are lots of great books about the tidyverse (R4DS and Advanced R come to m
 
 ## Koans > in-browser resources like datacamp or learnr
 
-With koans, you're working in the development environment you'll use for your own projects (scripts inside RStudio). With datacamp or learnr, you're not. Transitioning from the browser to using scripts can be difficult for learners, so I think it's much better to teach them to write code in a script from the beginning.
+With koans, you're working in the development environment you'll use for your own projects (scripts inside RStudio). With [datacamp](https://dnlmc.medium.com/dont-use-datacamp-ef04adcf1b7f#:~:text=After%20the%20webinar%2C%20some%20instructors,'%E2%80%9D) or learnr, you're not. Transitioning from the browser to using scripts can be difficult for learners, so I think it's much better to teach them to write code in a script from the beginning.
 
 ## To summarize, koans are great because they:
 
