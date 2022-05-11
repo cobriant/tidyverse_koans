@@ -1,18 +1,18 @@
-function(){#--------------------------------------------------------------
-#            Intro to the Tidyverse by Colleen O'Briant
-#               Koan #14: Functions that use dplyr
-#-------------------------------------------------------------------------
+function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  #                   Intro to the Tidyverse by Colleen O'Briant
+  #                       Koan #14: Functions that use dplyr
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # In order to progress:
   # 1. Read all instructions carefully.
-  # 2. When you come to an exercise, fill in the blank, un-comment the line,
-  #    and execute the code in the console (Ctrl/Cmd Return). If the piece
-  #    of code spans multiple lines, highlight the whole chunk or simply put
-  #    your cursor at the end of the last line.
+  # 2. When you come to an exercise, fill in the blank, un-comment the line
+  #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
+  #    If the piece of code spans multiple lines, highlight the whole chunk or
+  #    simply put your cursor at the end of the last line.
   # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
   # 4. Save (Ctrl/Cmd S).
 
-#-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Writing custom functions with dplyr
 
@@ -25,7 +25,7 @@ function(){#--------------------------------------------------------------
 #  eval in R here, but I'll give you some hints for avoiding errors when
 #  you're writing custom functions that use dplyr.
 
-#-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Consider a grouped summary of 'gapminder' that answers the query,
 # "What's the median life expectancy for each year in the data?"
@@ -67,16 +67,23 @@ grouped_summary2 <- function(data, grouping_var, summarize_var){
 
 # Now I don't get that error:
 
-grouped_summary2(data = gapminder, grouping_var = year, summarize_var = lifeExp)
+grouped_summary2(
+  data = gapminder,
+  grouping_var = year,
+  summarize_var = lifeExp
+  )
 
-grouped_summary2(data = gapminder, grouping_var = continent, summarize_var = gdpPercap)
+grouped_summary2(
+  data = gapminder,
+  grouping_var = continent,
+  summarize_var = gdpPercap
+  )
 
-#----------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# 1. You try: write a function 'arrange_filter' that arranges
-# a tibble by a certain variable and also filters by a logical condition.
-# Make sure to use the double brace syntax {{ var }} in the body
-# of the function.
+# 1. You try: write a function 'arrange_filter' that arranges a tibble by ------
+# a certain variable and also filters by a logical condition. Make sure to use
+# the double brace syntax {{ var }} in the body of the function.
 
 #1@
 
@@ -85,7 +92,7 @@ grouped_summary2(data = gapminder, grouping_var = continent, summarize_var = gdp
 #@1
 
 
-# 2. Test that your function works by running this code:
+# 2. Test that your function works by running this code: -----------------------
 
 #2@
 
@@ -93,8 +100,8 @@ grouped_summary2(data = gapminder, grouping_var = continent, summarize_var = gdp
 
 #@2
 
-#----------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# Great work! You're one step closer to tidyverse enlightenment.
-# Make sure to return to this topic to meditate on it later.
+# Great work! You're one step closer to tidyverse enlightenment. Make sure to
+# return to this topic to meditate on it later.
 }

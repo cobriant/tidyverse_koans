@@ -1,8 +1,8 @@
 function(){
-  #-------------------------------------------------------------------------------
-  #               Intro to the Tidyverse by Colleen O'Briant
-  #                          Koan #19: reduce()
-  #-------------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  #                   Intro to the Tidyverse by Colleen O'Briant
+  #                               Koan #19: reduce()
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # In order to progress:
   # 1. Read all instructions carefully.
@@ -13,7 +13,7 @@ function(){
   # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
   # 4. Save (Ctrl/Cmd S).
 
-  #-------------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # We've already learned the first function from the purrr family: map(). Now
   # we'll learn the next two: in this koan, we'll focus on reduce(), and in koan
@@ -34,7 +34,7 @@ function(){
   # The first example of how reduce() can be used is the function max(). max()
   # takes a vector of numbers and returns the number which is the largest.
 
-  # 1. Fill in the blank below so that the statement returns TRUE:
+  # 1. Fill in the blank below so that the statement returns TRUE: -------------
 
   #1@
 
@@ -44,8 +44,8 @@ function(){
 
   # What if you had to write the function `max` from scratch? You would probably
   # need to use `>`, keeping track of the maximum you've seen so far. So an
-  # algorithm to sequentially apply `>` to find the maximum of c(4, 2, 6, 8) would
-  # be this:
+  # algorithm to sequentially apply `>` to find the maximum of c(4, 2, 6, 8)
+  # would be this:
 
   # Compare the first two numbers in `.x`:
   4 > 2
@@ -70,8 +70,8 @@ function(){
     if_else(x > y, x, y)
   }
 
-  # 2. Test that the function works by filling in the blank below with any number
-  # to make the statement return TRUE:
+  # 2. Test that the function works by filling in the blank below with any -----
+  # number to make the statement return TRUE:
 
   #2@
 
@@ -118,10 +118,10 @@ function(){
   # Also read the qelp docs for reduce:
   ?qelp::reduce
 
-  #-------------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-  # 3. Your turn: create a function my_min() that finds the minimum of a vector of
-  #    numbers, using `<`, if_else(), and reduce().
+  # 3. Your turn: create a function my_min() that finds the minimum of a -------
+  # vector of numbers, using `<`, if_else(), and reduce().
 
   #3@
 
@@ -135,7 +135,7 @@ function(){
 
   # my_min(c(4, 2, 6, 8))
 
-  #-------------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # So we've learned that you can think of max() as a reduced `>` and min() as a
   # reduced `<`. You can also think of sum() as a reduced `+`.
@@ -156,7 +156,8 @@ function(){
     `+`(9) %>%
     `+`(10)
 
-  # 4. Use `+` and `reduce` to write a function that finds the sum of any vector.
+  # 4. Use `+` and `reduce` to write a function that finds the sum of any ------
+  # vector.
 
   #4@
 
@@ -168,7 +169,7 @@ function(){
 
   # my_sum(1:1000) == sum(1:1000)
 
-  #-------------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # Great work! You're one step closer to tidyverse enlightenment. Make sure to
   # return to this topic to meditate on it later.

@@ -1,7 +1,7 @@
-#-------------------------------------------------------------------------------
-#               Intro to the Tidyverse by Colleen O'Briant
-#                      Koan #18: first differences
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#                   Intro to the Tidyverse by Colleen O'Briant
+#                          Koan #18: first differences
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # In order to progress:
 # 1. Read all instructions carefully.
@@ -12,7 +12,7 @@
 # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 # 4. Save (Ctrl/Cmd S).
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 library(tidyverse)
 library(gapminder)
@@ -34,9 +34,9 @@ library(gapminder)
 
 # In the next few problems, we'll verify this is true using `gapminder`.
 
-# 1. Create a new variable `gdpPercap_lag` that is the first lag of `gdpPercap`.
-#    Make sure to `group_by` country so that we don't compare GDP's of different
-#    countries.
+# 1. Create a new variable `gdpPercap_lag` that is the first lag of ------------
+# `gdpPercap`. Make sure to `group_by` country so that we don't compare GDP's
+# of different countries.
 
 #01@
 
@@ -47,8 +47,9 @@ library(gapminder)
 #@01
 
 
-# 2. Lagging a variable is a transformation you can do inside `mutate` or inside
-#    lm() itself. Fill in the blanks below to estimate what we'll call model A:
+# 2. Lagging a variable is a transformation you can do inside `mutate` or ------
+# inside lm() itself. Fill in the blanks below to estimate what we'll call
+# model A:
 
 # lifeExp_t = \beta_0 + \beta_1 log(gdpPercap)_t + \beta_2 log(gdpPercap)_{t-1} + u_t
 
@@ -68,7 +69,8 @@ library(gapminder)
 
 #@02
 
-# 3. Now estimate what we'll call model B, which includes a first difference:
+# 3. Now estimate what we'll call model B, which includes a first --------------
+# difference:
 
 # lifeExp_t = \alpha_0 + \alpha_1 log(gdpPercap)_t +
 #             \alpha_2 I(log(gdpPercap)_t - log(gdpPercap)_{t-1}) + u_t.
@@ -89,7 +91,7 @@ library(gapminder)
 #@03
 
 
-# 4. Verify that the algebra we did in class works by running this code:
+# 4. Verify that the algebra we did in class works by running this code: -------
 # Does estimating model B allow us to recover the estimates from model A with a
 # smaller standard error for the coefficient on log(gdpPercap)_t?
 # You should get TRUE's for all of the following:
@@ -111,7 +113,7 @@ near(.1 + .2, .3)
 
 #' More info about floating point imprecision [here](https://www.techradar.com/news/computing/why-computers-suck-at-maths-644771?artc_pg=1).
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # It's also commonplace to see time series variables transformed into their
 # first difference. This can be useful because it lets us focus on how the
@@ -120,7 +122,7 @@ near(.1 + .2, .3)
 # variable may effect the level of another variable. We'll explore this in the
 # next few problems.
 
-# 5. Use `ggplot()` to plot the lifeExp for the United States over time.
+# 5. Use `ggplot()` to plot the lifeExp for the United States over time. -------
 
 #05@
 
@@ -138,9 +140,9 @@ near(.1 + .2, .3)
 # We'll talk about this more next week in class, but for now, notice what
 # happens to the time trend when we first difference lifeExp:
 
-# 6. Take the plot above, but instead of plotting US lifeExp over time, now plot
-#    the first difference of US lifeExp (lifeExp_t - lifeExp_{t-1}) over time.
-#    You should see that the time trend disappears:
+# 6. Take the plot above, but instead of plotting US lifeExp over time, --------
+# now plot the first difference of US lifeExp (lifeExp_t - lifeExp_{t-1}) over
+# time. You should see that the time trend disappears:
 
 #06@
 
@@ -154,9 +156,9 @@ near(.1 + .2, .3)
 #@06
 
 
-# 7. Next we'll take the plot above, but add the time series for the first
-#    difference of gdpPercap. We'll also focus on Afghanistan rather than the
-#    United States.
+# 7. Next we'll take the plot above, but add the time series for the first -----
+# difference of gdpPercap. We'll also focus on Afghanistan rather than the
+# United States.
 
 #07@
 
@@ -172,10 +174,10 @@ near(.1 + .2, .3)
 
 #@07
 
-# 8. The plot above isn't very good at comparing the two time series because
-# changes in gdpPercap are so much larger than changes in lifeExp. Transform
-# gdpPercap through multiplication, division, addition, or subtraction until
-# patterns in both the variables are visually clear. I've also added an
+# 8. The plot above isn't very good at comparing the two time series -----------
+# because changes in gdpPercap are so much larger than changes in lifeExp.
+# Transform gdpPercap through multiplication, division, addition, or subtraction
+# until patterns in both the variables are visually clear. I've also added an
 # aesthetic mapping for linetype so that we can differentiate between the two
 # series.
 
@@ -194,11 +196,11 @@ near(.1 + .2, .3)
 #@08
 
 
-# 9. Finally, we'll add two vertical axis labels and a title to make the plot
-# look really professional. The second axis should reverse the algebraic
+# 9. Finally, we'll add two vertical axis labels and a title to make the -------
+# plot look really professional. The second axis should reverse the algebraic
 # transformation you made to gdpPercap_diff. So if you divided and then added,
 # the second axis should subtract and then multiply: the syntax is:
-#                  ~ (. - 5)*50
+# ~ (. - 5)*50
 
 #09@
 
@@ -234,7 +236,7 @@ near(.1 + .2, .3)
 # completely spurious!
 
 
-# 10. Consider another country that isn't the US or Afghanistan, and draw a
+# 10. Consider another country that isn't the US or Afghanistan, and draw a-----
 # plot just like the plot in 9 for that country. Do increases in gdpPercap seem
 # to Granger Cause increases in life expectancy there?
 
@@ -260,7 +262,7 @@ near(.1 + .2, .3)
 
 #@10
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Great work! You're one step closer to tidyverse enlightenment. Make sure to
 # return to this topic to meditate on it later.

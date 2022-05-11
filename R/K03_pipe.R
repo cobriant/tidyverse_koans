@@ -1,18 +1,18 @@
-#-------------------------------------------------------------------------
-#            Intro to the Tidyverse by Colleen O'Briant
-#                          Koan #3: Piping
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#                   Intro to the Tidyverse by Colleen O'Briant
+#                                Koan #3: Piping
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # In order to progress:
 # 1. Read all instructions carefully.
-# 2. When you come to an exercise, fill in the blank, un-comment the line,
-#    and execute the code in the console (Ctrl/Cmd Return). If the piece
-#    of code spans multiple lines, highlight the whole chunk or simply put
-#    your cursor at the end of the last line.
+# 2. When you come to an exercise, fill in the blank, un-comment the line
+#    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
+#    If the piece of code spans multiple lines, highlight the whole chunk or
+#    simply put your cursor at the end of the last line.
 # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 # 4. Save (Ctrl/Cmd S).
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Run this code to get started:
 
@@ -24,15 +24,17 @@ US_data <- tibble(
   lifeExp   = c(69.5, 73.4, 76.8, 78.5)
 )
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-#                             Piping: %>%
+# Piping: %>%
 
 # The pipe is *the most frequently used* function in the tidyverse. It lets
 # us clearly express a sequence of functions without cluttering our programs
 # with parentheses from function composition.
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#                       ----- What does the pipe do? -----
 
 # Suppose you have a tibble named 'x', and you'd like to apply a function
 # 'f' on it. So you run:
@@ -51,17 +53,18 @@ US_data <- tibble(
 # The way you should read the pipe is with the word *then*.
 # Read the above code as "Take x, *then* apply f."
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# Examples: Apply a function directly, or pipe the data in.
+#                              ----- Examples -----
 
-# Two ways to do the same thing:
+# You can apply a function directly, or you can pipe the data into a function.
+# So two ways to do the same thing are:
 
 names(US_data)
 
 US_data %>% names()
 
-# Your turn: apply 'print' to US_data using a pipe:
+# 1. Your turn: apply 'print' to US_data using a pipe. -------------------------
 
 print(US_data)
 
@@ -70,8 +73,11 @@ print(US_data)
 # __ %>% __
 
 #@1
-#-------------------------------------------------------------------------
 
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#                  ----- Applying a sequence of functions -----
+#
 # You can start to see how the pipe comes in handy when you string 2 or
 # more functions together.
 
@@ -103,7 +109,7 @@ print(US_data)
 # make our code more *clear and readable*, which is one of our biggest
 # goals for writing good code.
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Example: take 'US_data', get the variable names by applying the function
 # 'names()' on it, AND THEN see those names in a new tab by applying the
@@ -117,7 +123,7 @@ print(US_data)
 
 # view(names(US_data))
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # What would it look like to pipe a data structure into a sequence of 3,
 # or even 4 functions?
@@ -142,15 +148,15 @@ print(US_data)
 # You'll see plenty of examples of piping 2, 3, 4, or more functions in
 # later sections, so keep an eye out for that!
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Finally, read the qelp docs on the pipe to find out even more:
 
 ?qelp::`%>%`
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# Great work! You're one step closer to tidyverse enlightenment.
-# Make sure to return to this topic to meditate on it later.
+# Great work! You're one step closer to tidyverse enlightenment. Make sure to
+# return to this topic to meditate on it later.
 
 # If you're ready, you can move on to the next koan: filter, select, and mutate.

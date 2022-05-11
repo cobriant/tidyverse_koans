@@ -1,18 +1,18 @@
-function(){#--------------------------------------------------------------
-  #            Intro to the Tidyverse by Colleen O'Briant
-  #                          Koan #15: map()
-  #-------------------------------------------------------------------------
+function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  #                   Intro to the Tidyverse by Colleen O'Briant
+  #                                Koan #15: map()
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # In order to progress:
   # 1. Read all instructions carefully.
-  # 2. When you come to an exercise, fill in the blank, un-comment the line,
-  #    and execute the code in the console (Ctrl/Cmd Return). If the piece
-  #    of code spans multiple lines, highlight the whole chunk or simply put
-  #    your cursor at the end of the last line.
+  # 2. When you come to an exercise, fill in the blank, un-comment the line
+  #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
+  #    If the piece of code spans multiple lines, highlight the whole chunk or
+  #    simply put your cursor at the end of the last line.
   # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
   # 4. Save (Ctrl/Cmd S).
 
-  #-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # In this class, we've learned a lot about two very important tidyverse
   # packages: 'dplyr' and 'ggplot2'. We'll spend the rest of the course
@@ -29,7 +29,9 @@ function(){#--------------------------------------------------------------
   library(tidyverse)
   library(gapminder)
 
-  #--- Vectorized Functions ------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+  #                        ----- Vectorized Functions -----
 
   # Last week we learned we could define our own custom functions. Here I
   # define a function called 'pct_change' that takes two arguments: an "old"
@@ -40,7 +42,7 @@ function(){#--------------------------------------------------------------
     (new - old)/old
   }
 
-  # 1. Does 'pct_change' work on values?
+  # 1. Does 'pct_change' work on values? ---------------------------------------
 
   #1@
 
@@ -49,7 +51,7 @@ function(){#--------------------------------------------------------------
   #@1
 
 
-  # 2. Does 'pct_change' work on vectors?
+  # 2. Does 'pct_change' work on vectors? --------------------------------------
 
   #2@
 
@@ -58,23 +60,23 @@ function(){#--------------------------------------------------------------
   #@2
 
 
-  # How is it that 'pct_change' works on vectors? Well, 'pct_change'
-  # is defined only using subtraction and division, which both work
-  # element-wise on vectors. You can plug vectors directly into the
-  # computation that's done in the function body:
+  # How is it that 'pct_change' works on vectors? Well, 'pct_change' is defined
+  # only using subtraction and division, which both work element-wise on
+  # vectors. You can plug vectors directly into the computation that's done in
+  # the function body:
 
   (c(4, 5, 6) - c(1, 2, 3))/c(1, 2, 3)
 
+  #                          ----- Example 1: rnorm -----
 
-  # Most of the functions we've been using are "vectorized" (they
-  # work with vectors). But some functions may not work on vectors so
-  # smoothly. And when you define your own custom functions that
-  # are more complicated than `pct_change`, they oftentimes won’t
-  # work on vectors.
+  # Most of the functions we've been using are "vectorized" (they work with
+  # vectors of any length). But some functions may not work on vectors so
+  # smoothly. And when you define your own custom functions that are more
+  # complicated than `pct_change`, they oftentimes won’t work on vectors.
 
   # For example, take 'rnorm()'.
 
-  # 3. Use 'rnorm()' to generate 10 random numbers from N(0, 1).
+  # 3. Use 'rnorm()' to generate 10 random numbers from N(0, 1). ---------------
 
   #3@
 
@@ -83,10 +85,11 @@ function(){#--------------------------------------------------------------
   #@3
 
 
-  # Suppose we wanted to generate 10 random numbers from N(0, 1),
-  # and then 10 random numbers from N(0, 2), and then 10 random
-  # numbers from N(0, 3), all the way up to 10 random numbers from
-  # N(0, 100).
+  # Suppose we have this task:
+  # Generate 10 random numbers from N(0, 1),
+  #          10 random numbers from N(0, 2),
+  #          10 random numbers from N(0, 3),
+  # all the way up to 10 random numbers from N(0, 100).
 
   # First attempt: try to put a vector into 'sd':
   rnorm(n = 10, mean = 0, sd = 1:100)
@@ -111,7 +114,7 @@ function(){#--------------------------------------------------------------
   #       take you all day or even all week to type out!)
 
 
-  # The correct solution is to use map(.x, .f).
+  # The correct solution: use map(.x, .f).
 
   # `map(.x, .f)` is from the package `purrr`, which is the last tidyverse
   # package we'll talk about in-depth. `purrr` is named the way it is because
@@ -146,27 +149,30 @@ function(){#--------------------------------------------------------------
 
   # `.x` will be the vector 1:100.
 
-  # What's the function `.f` we'll apply to every element of `.x`? Exactly what
-  # you think:
+  # What's the function `.f` we'll apply to every element of `.x`? It should
+  # take a standard deviation as its argument, and it should output 10 ranom
+  # normal numbers with a mean of zero and a standard deviation that is the
+  # function argument:
 
   # function(.x){
   #   rnorm(n = 10, mean = 0, sd = .x)
   # }
 
   # Use the tilde `~` for defining a function "formula-style" and referring to
-  # .x directly:
+  # .x directly in the map call:
 
   # map(.x = 1:100, .f = ~ rnorm(n = 10, mean = 0, sd = .x))
 
   # There are actually 3 ways to define the function `.f` inside a map call:
 
-  #   * as a formula with `~`
+  #   * as a formula with the tilde `~`
   #   * as an anonymous (lambda) function
   #   * as a named function
 
-  # All these options are pretty similar, so it comes down to personal preference.
+  # All these options are pretty similar, so it comes down to personal
+  # preference.
 
-  # Use an anonymous function:
+  # Using an anonymous function:
 
   # map(.x = 1:100, .f = function(input) rnorm(n = 10, mean = 0, sd = input))
 
@@ -178,11 +184,11 @@ function(){#--------------------------------------------------------------
   # map(.x = 1:100, .f = rnorm_sd)
 
 
-  #' ## Example 2: reading csv files
+  #                     ----- Example 2: reading csv files -----
 
-  # Recall: in the murder mystery project, we had to read 8 different csv
-  # files, and we did it one by one, because 'read_csv' takes just ONE
-  # csv file at a time.
+  # Recall: in the murder mystery project, we had to read 8 different csv files,
+  # and we did it one by one, because 'read_csv' takes just ONE csv file at a
+  # time.
 
   # people <- read_csv("https://raw.githubusercontent.com/cobriant/dplyrmurdermystery/master/data/person.csv")
   # drivers_license <- read_csv("https://raw.githubusercontent.com/cobriant/dplyrmurdermystery/master/data/drivers_license.csv")
@@ -205,7 +211,6 @@ function(){#--------------------------------------------------------------
     ".csv",
     sep = ""
   )
-
 
   # But `read_csv()` is not vectorized. It takes only one csv file at a time,
   # and when we pass a vector in, it thinks the names of the files are the data
@@ -237,7 +242,7 @@ function(){#--------------------------------------------------------------
   # It works! The output is a list of tibbles. From there, we could tell R how
   # to use `left_join` to combine them into a bigger tibble by their common keys.
 
-  #-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # Great work! You're one step closer to tidyverse enlightenment.
   # Make sure to return to this topic to meditate on it later.

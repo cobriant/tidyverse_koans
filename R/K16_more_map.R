@@ -1,18 +1,18 @@
-function(){#----------------------------------------------------------------
-  #            Intro to the Tidyverse by Colleen O'Briant
-  #                      Koan #16: More map()
-  #-------------------------------------------------------------------------
+function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  #                   Intro to the Tidyverse by Colleen O'Briant
+  #                              Koan #16: More map()
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # In order to progress:
   # 1. Read all instructions carefully.
-  # 2. When you come to an exercise, fill in the blank, un-comment the line,
-  #    and execute the code in the console (Ctrl/Cmd Return). If the piece
-  #    of code spans multiple lines, highlight the whole chunk or simply put
-  #    your cursor at the end of the last line.
+  # 2. When you come to an exercise, fill in the blank, un-comment the line
+  #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
+  #    If the piece of code spans multiple lines, highlight the whole chunk or
+  #    simply put your cursor at the end of the last line.
   # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
   # 4. Save (Ctrl/Cmd S).
 
-  #-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # In this koan, you'll get more practice using map(.x, .f).
 
@@ -21,7 +21,7 @@ function(){#----------------------------------------------------------------
   library(tidyverse)
   library(gapminder)
 
-  #-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # In the last koan, we used 'map(.x, .f)' to generate a list of 100 sets
   # of 10 random numbers with increasing standard deviations like this:
@@ -44,7 +44,7 @@ function(){#----------------------------------------------------------------
 
   # map(.x = 1:100, .f = rnorm_sd)
 
-  #-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # Suppose we want to take the vector 1:10 and multiply each element by 3.
   # Multiplication is vectorized, so this is clearly the best way:
@@ -54,7 +54,7 @@ function(){#----------------------------------------------------------------
   # But your task will be to use map(.x, .f) to solve that simple problem:
   # take the vector 1:10 and multiply each element by 3.
 
-  # 1. Use a named function as `.f`:
+  # 1. Use a named function as `.f`. -------------------------------------------
 
   #01@
 
@@ -67,7 +67,7 @@ function(){#----------------------------------------------------------------
   #@01
 
 
-  # 2. Use an anonymous function as '.f':
+  # 2. Use an anonymous function as '.f'. --------------------------------------
 
   #02@
 
@@ -76,7 +76,7 @@ function(){#----------------------------------------------------------------
   #@02
 
 
-  # 3. Use a formula as '.f':
+  # 3. Use a formula as '.f'. --------------------------------------------------
 
   #03@
 
@@ -84,16 +84,16 @@ function(){#----------------------------------------------------------------
 
   #@03
 
-  #-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-  # Simulation with map(.x, .f):
+  #                    ----- Simulation with map(.x, .f): -----
 
   # In class, we discussed that when an explanatory variable is measured
   # with error (perhaps people misreport their information), its estimate
   # is attenuated (closer to zero than the true value). In this section,
   # we'll simulate that result.
 
-  # 4. Fill in the blanks to generate a dataset with two variables:
+  # 4. Fill in the blanks to generate a dataset with two variables: ------------
   #    x should take values sampled randomly from 1 to 10.
   #    y should be 3 + 2*x + u, where u is iid N(mean = 0, sd = 10).
 
@@ -107,7 +107,7 @@ function(){#----------------------------------------------------------------
   #@04
 
 
-  # 5. Take the dataset you defined above and add a new variable:
+  # 5. Take the dataset you defined above and add a new variable: --------------
   #    `x_observed`. It should be x + a measurement error, which we'll
   #    say is distributed N(mean = 0, sd = 1).
 
@@ -122,13 +122,12 @@ function(){#----------------------------------------------------------------
   #@05
 
 
-  # 6. Take the dataset you defined above and use lm() to estimate
-  # the effect of x on y. You should get a number close to 2.
-  # Then estimate the effect of x on y *using x_observed instead of x*.
-  # In the presence of measurement error, the researcher doesn't get
-  # to see x. They only see x_observed. Run the code multiple times.
-  # Do you still get estimates for the effect of x on y that is close
-  # to 2, or do the estimates seem biased?
+  # 6. Take the dataset you defined above and use lm() to estimate -------------
+  # the effect of x on y. You should get a number close to 2. Then estimate the
+  # effect of x on y *using x_observed instead of x*. In the presence of
+  # measurement error, the researcher doesn't get to see x. They only see
+  # x_observed. Run the code multiple times. Do you still get estimates for the
+  # effect of x on y that is close to 2, or do the estimates seem biased?
 
   #06@
 
@@ -139,13 +138,14 @@ function(){#----------------------------------------------------------------
   #@06
 
 
-  # 7. In this step, we'll use 'map(.x, .f)' to generate 100
-  # datasets, run lm() on each of them, and report the estimates
-  # of the effect of x on y for each regression.
+  # 7. In this step, we'll use 'map(.x, .f)' to generate 100 datasets, run -----
+  # lm() on each of them, and report the estimates of the effect of x on y for
+  # each regression.
 
   # .x will be the sequence 1:100. This will run .f 100 times.
   # .f will be a function that:
-  # - Takes no arguments (use '...' to let .f take .x without doing anything with it)
+  # - Takes no arguments (use '...' to let .f take .x without doing anything
+  #   with it)
   # - Generates a new dataset (with x, y, and x_observed),
   # - Runs a regression of x_observed on y,
   # - And outputs the estimate for the effect of x_observed on y.
@@ -168,10 +168,9 @@ function(){#----------------------------------------------------------------
   #@07
 
 
-  # 8. In the last step, you should have created a long list
-  # of estimates. Try using 'map_dfr(.x, .f)' instead of 'map(.x, .f)'.
-  # The only difference is that 'map_dfr' will output a dataframe (a tibble)
-  # instead of a list.
+  # 8. In the last step, you should have created a long list of estimates. -----
+  # Try using 'map_dfr(.x, .f)' instead of 'map(.x, .f)'. The only difference is
+  # that 'map_dfr' will output a dataframe (a tibble) instead of a list.
 
   #08@
 
@@ -191,10 +190,9 @@ function(){#----------------------------------------------------------------
   #@08
 
 
-  # 9. Now that we have a dataframe of simulation results,
-  # let's pipe the results into ggplot for visualization. Use
-  # geom_density() to visualize the distribution of estimates
-  # you calculated.
+  # 9. Now that we have a dataframe of simulation results, let's pipe the ------
+  # results into ggplot for visualization. Use geom_density() to visualize the
+  # distribution of estimates you calculated.
 
   #09@
 
@@ -217,7 +215,7 @@ function(){#----------------------------------------------------------------
   #@09
 
 
-  # 10. What if the researcher had access to 'x' instead of 'x_observed'?
+  # 10. What if the researcher had access to 'x' instead of 'x_observed'? ------
   # Run the simulation from 9) using y ~ x to see if the bias disappears.
 
   #10@
@@ -240,10 +238,10 @@ function(){#----------------------------------------------------------------
 
   #@10
 
-  #-------------------------------------------------------------------------
+  #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-  # Great work! You're one step closer to tidyverse enlightenment.
-  # Make sure to return to this topic to meditate on it later.
+  # Great work! You're one step closer to tidyverse enlightenment. Make sure to
+  # return to this topic to meditate on it later.
 
   # If you're ready, you can move on to the next koan: lag.
 }

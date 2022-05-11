@@ -1,7 +1,7 @@
-#-------------------------------------------------------------------------------
-#               Intro to the Tidyverse by Colleen O'Briant
-#                        Koan #20: accumulate()
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#                   Intro to the Tidyverse by Colleen O'Briant
+#                             Koan #20: accumulate()
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # In order to progress:
 # 1. Read all instructions carefully.
@@ -12,7 +12,7 @@
 # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 # 4. Save (Ctrl/Cmd S).
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 library(tidyverse)
 
@@ -41,13 +41,13 @@ accumulate(c(1, 3, 9, 2), ~ if_else(.x > .y, .x, .y))
 # The fourth element of the accumulate output is 9. That's because the maximum
 # of 9 and 2 is 9.
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Now consider the minimum function:
 
 accumulate(1:10, ~ if_else(.x < .y, .x, .y))
 
-# 1. Fill in the blank so that this statement returns TRUEs:
+# 1. Fill in the blanks so that this statement returns TRUEs: ------------------
 
 #1@
 
@@ -55,13 +55,13 @@ accumulate(1:10, ~ if_else(.x < .y, .x, .y))
 
 #@1
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Consider the sum() function:
 
 accumulate(1:10, `+`)
 
-# 2. Fill in the blank so that this statement returns TRUEs:
+# 2. Fill in the blank so that this statement returns TRUEs: -------------------
 
 #2@
 
@@ -69,7 +69,7 @@ accumulate(1:10, `+`)
 
 #@2
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 #' In order to generate data that follows a random walk:
 #' $y_t = y_{t-1} + u_t$,
@@ -104,7 +104,7 @@ tibble(
   ggplot(aes(x = t, y = y)) +
   geom_line()
 
-# 3. Take the first difference of this random walk:
+# 3. Take the first difference of this random walk: ----------------------------
 
 #3@
 
@@ -122,13 +122,13 @@ tibble(
 #' $y_t = y_{t-1} + u_t$
 #' $y_t - y_{t-1} = u_t$
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 #' You can also simulate other autocorrelated time series using accumulate():
 #' Instead of a random walk: $y_t = y_{t-1} + u_t$,
 #' Suppose we want to simulate: $y_t = \beta_0 + \beta_1 y_{t-1} + u_t$.
 
-#' 4. Generate an autocorrelated time series:
+#' 4. Generate an autocorrelated time series: ----------------------------------
 #' $y = .5 + .5*y_{t-1} + u_t$, u_t ~ iid N(0, $\sigma^2$)
 
 #4@
@@ -146,7 +146,7 @@ tibble(
   ggplot(aes(x = t, y = y)) +
   geom_line()
 
-#-------------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Wow! You've finished all 20 tidyverse koans, what a wonderful accomplishment.
 # You've worked hard and learned so much.

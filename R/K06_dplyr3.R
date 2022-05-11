@@ -1,28 +1,29 @@
-#-------------------------------------------------------------------------
-#            Intro to the Tidyverse by Colleen O'Briant
-#                   Koan #6: arrange and slice
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#                   Intro to the Tidyverse by Colleen O'Briant
+#                           Koan #6: arrange and slice
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # In order to progress:
 # 1. Read all instructions carefully.
-# 2. When you come to an exercise, fill in the blank, un-comment the line,
-#    and execute the code in the console (Ctrl/Cmd Return). If the piece
-#    of code spans multiple lines, highlight the whole chunk or simply put
-#    your cursor at the end of the last line.
+# 2. When you come to an exercise, fill in the blank, un-comment the line
+#    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
+#    If the piece of code spans multiple lines, highlight the whole chunk or
+#    simply put your cursor at the end of the last line.
 # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 # 4. Save (Ctrl/Cmd S).
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# In this koan, you'll learn the final two dplyr verbs: arrange() and
-# slice().
+# In this koan, you'll learn the final two dplyr verbs: arrange() and slice().
 
 # Run this code to get started.
 
 library(tidyverse)
 library(gapminder)
 
-#--- arrange ------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#                             ----- arrange() -----
 
 # arrange() rearranges the rows of your tibble by the variable you specify.
 
@@ -38,7 +39,7 @@ gapminder %>%
 gapminder %>%
   arrange(desc(pop))
 
-# 1. Take all the observations in Asia and sort them from the lowest
+# 1. Take all the observations in Asia and sort them from the lowest -----------
 # life expectancies to the highest.
 
 #1@
@@ -47,7 +48,7 @@ gapminder %>%
 
 #@1
 
-# 2. Take all the observations in Asia and sort them from the highest
+# 2. Take all the observations in Asia and sort them from the highest ----------
 # life expectancies to the lowest.
 
 #2@
@@ -60,7 +61,9 @@ gapminder %>%
 
 ?qelp::arrange
 
-#--- slice --------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#                              ----- slice() -----
 
 # slice() lets you select rows by their integer locations. So if you
 # want to select the second row of 'gapminder':
@@ -78,7 +81,7 @@ gapminder %>%
 gapminder %>%
   slice(2:4)
 
-# 3. Select row 853 to row 864.
+# 3. Select row 853 to row 864. ------------------------------------------------
 
 #3@
 
@@ -98,7 +101,7 @@ gapminder %>%
 gapminder %>%
   slice_tail(n = 2)
 
-# 4. Take all the observations in Asia and return the five with the
+# 4. Take all the observations in Asia and return the five with the ------------
 # highest life expectancies (hint: use arrange()).
 
 #4@
@@ -107,7 +110,7 @@ gapminder %>%
 
 #@4
 
-# 5. Which (one) country has the highest life expectancy in each continent?
+# 5. Which (one) country has the highest life expectancy in each continent?-----
 # (hint: use arrange() and also group_by()).
 
 #5@
@@ -116,9 +119,9 @@ gapminder %>%
 
 #@5
 
-#-------------------------------------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# Great work! You're one step closer to tidyverse enlightenment.
-# Make sure to return to this topic to meditate on it later.
+# Great work! You're one step closer to tidyverse enlightenment. Make sure to
+# return to this topic to meditate on it later.
 
 # If you're ready, you can move on to koan 7: left_join.
