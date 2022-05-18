@@ -60,7 +60,8 @@ install_github("cobriant/qelp")
 # Run this:
 ?qelp::install.packages
 
-# If everything went right, the help docs I wrote on the function `install.packages` should pop up in the lower right hand pane.
+# If everything went right, the help docs I wrote on the function `install.packages` 
+# should pop up in the lower right hand pane.
 ```
 
 ## 3. Install the koans
