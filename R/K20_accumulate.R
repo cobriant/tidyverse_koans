@@ -152,6 +152,6 @@ tibble(
 # You've worked hard and learned so much.
 
 # You may not feel like you've achieved tidyverse enlightenment yet, but as you
-# keep practicing, you may find yourself surprised to learn just how powerful
-# these concepts truly are. And you may discover you are a much more powerful
-# programmer than you ever thought you could be!
+# keep practicing, you may be surprised to learn how powerful these concepts 
+# really are. And you may discover you are a much more powerful programmer than 
+# you ever thought you could be!
