@@ -1,4 +1,4 @@
-function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+function() {#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   #                   Intro to the Tidyverse by Colleen O'Briant
   #                              Koan #16: More map()
   #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -6,9 +6,9 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # In order to progress:
   # 1. Read all instructions carefully.
   # 2. When you come to an exercise, fill in the blank, un-comment the line
-  #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
-  #    If the piece of code spans multiple lines, highlight the whole chunk or
-  #    simply put your cursor at the end of the last line.
+  #    (Ctrl/Cmd Shift C), and execute the code in the console
+  #    (Ctrl/Cmd Return). If the piece of code spans multiple lines, highlight
+  #    the whole chunk or simply put your cursor at the end of the last line.
   # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
   # 4. Save (Ctrl/Cmd S).
 
@@ -38,7 +38,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # Named functions:
 
-  # rnorm_sd <- function(input){
+  # rnorm_sd <- function(input) {
   #   rnorm(n = 10, mean = 0, sd = input)
   # }
 
@@ -49,7 +49,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # Suppose we want to take the vector 1:10 and multiply each element by 3.
   # Multiplication is vectorized, so this is clearly the best way:
 
-  (1:10)*3
+  (1:10) * 3
 
   # But your task will be to use map(.x, .f) to solve that simple problem:
   # take the vector 1:10 and multiply each element by 3.
@@ -58,7 +58,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   #01@
 
-  # multiply_by_three <- function(a){
+  # multiply_by_three <- function(a) {
   #   __
   # }
   #
@@ -154,7 +154,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # map(
   #   .x = __,
-  #   .f = function(...){
+  #   .f = function(...) {
   #     tibble(
   #       __
   #     ) %>%
@@ -176,7 +176,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # map_dfr(
   #   .x = __,
-  #   .f = function(...){
+  #   .f = function(...) {
   #     tibble(
   #       __
   #     ) %>%
@@ -198,7 +198,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # map_dfr(
   #   .x = __,
-  #   .f = function(...){
+  #   .f = function(...) {
   #     tibble(
   #       __
   #     ) %>%
@@ -222,7 +222,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # map_dfr(
   #   .x = __,
-  #   .f = function(...){
+  #   .f = function(...) {
   #     tibble(
   #       __
   #     ) %>%

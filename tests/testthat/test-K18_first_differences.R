@@ -1,5 +1,4 @@
 K18 <- read_file("../../R/K18_first_differences.R")
-# K18 <- read_file("R/K18_first_differences.R")
 
 test_that("K18: Question 1", {
   skip_incomplete(K18, "01")

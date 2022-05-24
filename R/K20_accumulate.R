@@ -141,7 +141,7 @@ tibble(
 
 tibble(
   t = 1:100,
-  y = accumulate(rnorm(n = 100), ~ .5 + .5*.x + .y)
+  y = accumulate(rnorm(n = 100), ~ .5 + (.5 * .x) + .y)
 ) %>%
   ggplot(aes(x = t, y = y)) +
   geom_line()
@@ -152,6 +152,6 @@ tibble(
 # You've worked hard and learned so much.
 
 # You may not feel like you've achieved tidyverse enlightenment yet, but as you
-# keep practicing, you may be surprised to learn how powerful these concepts 
-# really are. And you may discover you are a much more powerful programmer than 
+# keep practicing, you may be surprised to learn how powerful these concepts
+# really are. And you may discover you are a much more powerful programmer than
 # you ever thought you could be!

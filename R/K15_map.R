@@ -1,4 +1,4 @@
-function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+function() {#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   #                   Intro to the Tidyverse by Colleen O'Briant
   #                                Koan #15: map()
   #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -6,9 +6,9 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # In order to progress:
   # 1. Read all instructions carefully.
   # 2. When you come to an exercise, fill in the blank, un-comment the line
-  #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
-  #    If the piece of code spans multiple lines, highlight the whole chunk or
-  #    simply put your cursor at the end of the last line.
+  #    (Ctrl/Cmd Shift C), and execute the code in the console
+  #    (Ctrl/Cmd Return). If the piece of code spans multiple lines, highlight
+  #    the whole chunk or simply put your cursor at the end of the last line.
   # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
   # 4. Save (Ctrl/Cmd S).
 
@@ -38,8 +38,8 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # value and a "new" value, and it returns the percentage change between
   # them.
 
-  pct_change <- function(old, new){
-    (new - old)/old
+  pct_change <- function(old, new) {
+    (new - old) / old
   }
 
   # 1. Does 'pct_change' work on values? ---------------------------------------
@@ -65,7 +65,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # vectors. You can plug vectors directly into the computation that's done in
   # the function body:
 
-  (c(4, 5, 6) - c(1, 2, 3))/c(1, 2, 3)
+  (c(4, 5, 6) - c(1, 2, 3)) / c(1, 2, 3)
 
   #                          ----- Example 1: rnorm -----
 
@@ -154,7 +154,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # normal numbers with a mean of zero and a standard deviation that is the
   # function argument:
 
-  # function(.x){
+  # function(.x) {
   #   rnorm(n = 10, mean = 0, sd = .x)
   # }
 
@@ -178,7 +178,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # Or use a named function:
 
-  # rnorm_sd <- function(input){
+  # rnorm_sd <- function(input) {
   #   rnorm(n = 10, mean = 0, sd = input)
   # }
   # map(.x = 1:100, .f = rnorm_sd)
@@ -240,7 +240,8 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # )
 
   # It works! The output is a list of tibbles. From there, we could tell R how
-  # to use `left_join` to combine them into a bigger tibble by their common keys.
+  # to use `left_join` to combine them into a bigger tibble by their common
+  # variables.
 
   #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 

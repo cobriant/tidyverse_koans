@@ -72,8 +72,8 @@ gapminder %>%
   filter(continent == "Europe")
 
 # You can filter on more than one logical condition at a time. This will
-# return a tibble with all the gapminder observations from Asia in the year 1952.
-# Recall that character strings ("Asia") need quotes, but variable names
+# return a tibble with all the gapminder observations from Asia in the year
+# 1952. Recall that character strings ("Asia") need quotes, but variable names
 # and numbers don't (continent, year, 1952).
 
 gapminder %>%

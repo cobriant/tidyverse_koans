@@ -1,5 +1,4 @@
 K13 <- read_file("../../R/K13_functions.R")
-# K13 <- read_file("R/K13_functions.R")
 
 test_that("K13: Question 1", {
   skip_if(is.null(parse_eval(str_match_f(K13, "1"))), message = "incomplete")

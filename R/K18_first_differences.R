@@ -51,7 +51,8 @@ library(gapminder)
 # inside lm() itself. Fill in the blanks below to estimate what we'll call
 # model A:
 
-# lifeExp_t = \beta_0 + \beta_1 log(gdpPercap)_t + \beta_2 log(gdpPercap)_{t-1} + u_t
+# lifeExp_t = \beta_0 + \beta_1 log(gdpPercap)_t +
+#             \beta_2 log(gdpPercap)_{t-1} + u_t
 
 # Write down your estimates for \beta_0, \beta_1, and \beta_2. It doesn't matter
 # whether you log() and then lag(), or lag() and then log().
@@ -191,7 +192,11 @@ near(.1 + .2, .3)
 #   ) %>%
 #   ggplot() +
 #   geom_line(aes(x = year, y = lifeExp_diff, linetype = "Life Expectancy")) +
-#   geom_line(aes(x = year, y = (gdpPercap_diff/__) + __, linetype = "GDP per cap"))
+#   geom_line(
+#     aes(x = year,
+#         y = (gdpPercap_diff/__) + __,
+#         linetype = "GDP per cap")
+#     )
 
 #@08
 
@@ -212,7 +217,11 @@ near(.1 + .2, .3)
 #   ) %>%
 #   ggplot() +
 #   geom_line(aes(x = year, y = lifeExp_diff, linetype = "Life Expectancy")) +
-#   geom_line(aes(x = year, y = (gdpPercap_diff/__) + __, linetype = "GDP per cap")) +
+#   geom_line(
+#     aes(x = year,
+#         y = (gdpPercap_diff/__) + __,
+#         linetype = "GDP per cap")
+#     ) +
 #   scale_y_continuous(
 #     "Change in Life Expectancy (Years)",
 #     sec.axis = sec_axis(
@@ -250,7 +259,11 @@ near(.1 + .2, .3)
 # ) %>%
 #   ggplot() +
 #   geom_line(aes(x = year, y = lifeExp_diff, linetype = "Life Expectancy")) +
-#   geom_line(aes(x = year, y = (gdpPercap_diff/__) + __, linetype = "GDP per cap")) +
+#   geom_line(
+#     aes(x = year,
+#         y = (gdpPercap_diff/__) + __,
+#         linetype = "GDP per cap")
+#     ) +
 #   scale_y_continuous(
 #     "Change in Life Expectancy (Years)",
 #     sec.axis = sec_axis(

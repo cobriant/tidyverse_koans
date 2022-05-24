@@ -1,5 +1,4 @@
 K12 <- read_file("../../R/K12_stats.R")
-# K12 <- read_file("R/K12_stats.R")
 
 test_that("K12: Question 1", {
   skip_incomplete(K12, "01")

@@ -18,7 +18,7 @@
 
 library(tidyverse)
 
-US_data <- tibble(
+us_data <- tibble(
   year      = c(1957, 1977, 1997, 2017),
   gdpPercap = c(14847, 24073, 35767, 60062),
   lifeExp   = c(69.5, 73.4, 76.8, 78.5)
@@ -60,13 +60,13 @@ US_data <- tibble(
 # You can apply a function directly, or you can pipe the data into a function.
 # So two ways to do the same thing are:
 
-names(US_data)
+names(us_data)
 
-US_data %>% names()
+us_data %>% names()
 
-# 1. Your turn: apply 'print' to US_data using a pipe. -------------------------
+# 1. Your turn: apply 'print' to us_data using a pipe. -------------------------
 
-print(US_data)
+print(us_data)
 
 #1@
 
@@ -111,17 +111,17 @@ print(US_data)
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# Example: take 'US_data', get the variable names by applying the function
+# Example: take 'us_data', get the variable names by applying the function
 # 'names()' on it, AND THEN see those names in a new tab by applying the
-# function 'view()' to the result of 'US_data %>% names()':
+# function 'view()' to the result of 'us_data %>% names()':
 
-# US_data %>%
+# us_data %>%
 #   names() %>%
 #   view()
 
 # The alternative:
 
-# view(names(US_data))
+# view(names(us_data))
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 

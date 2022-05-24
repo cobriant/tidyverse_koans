@@ -1,5 +1,4 @@
 K14 <- read_file("../../R/K14_functions_dplyr.R")
-#K14 <- read_file("R/K14_functions_dplyr.R")
 
 test_that("K14: Question 1", {
   skip_incomplete(K14, "1")

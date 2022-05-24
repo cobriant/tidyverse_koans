@@ -1,5 +1,4 @@
 K17 <- read_file("../../R/K17_lag.R")
-# K17 <- read_file("R/K17_lag.R")
 
 test_that("K17: Question 1", {
   skip_if(is.null(parse_eval(str_match_f(K17, "1"))), message = "incomplete")
@@ -18,7 +17,7 @@ test_that("K17: Question 3", {
 
 test_that("K17: Question 4", {
   skip_if(is.null(parse_eval(str_match_f(K17, "4"))), message = "incomplete")
-  expect_true(is.na(parse_eval(str_match_f(K17, "4"))[[1,7]]))
+  expect_true(is.na(parse_eval(str_match_f(K17, "4"))[[1, 7]]))
 })
 
 test_that("K17: Question 5", {
@@ -28,20 +27,20 @@ test_that("K17: Question 5", {
 
 test_that("K17: Question 6", {
   skip_if(is.null(parse_eval(str_match_f(K17, "6"))), message = "incomplete")
-  expect_true(is.na(parse_eval(str_match_f(K17, "4"))[[1,7]]))
+  expect_true(is.na(parse_eval(str_match_f(K17, "4"))[[1, 7]]))
 })
 
 test_that("K17: Question 7", {
   skip_if(is.null(parse_eval(str_match_f(K17, "7"))), message = "incomplete")
-  expect_true(is.na(parse_eval(str_match_f(K17, "7"))[[13,7]]))
+  expect_true(is.na(parse_eval(str_match_f(K17, "7"))[[13, 7]]))
 })
 
 test_that("K17: Question 7", {
   skip_if(is.null(parse_eval(str_match_f(K17, "7"))), message = "incomplete")
-  expect_true(is.na(parse_eval(str_match_f(K17, "7"))[[13,7]]))
+  expect_true(is.na(parse_eval(str_match_f(K17, "7"))[[13, 7]]))
 })
 
 test_that("K17: Question 8", {
   skip_if(is.null(parse_eval(str_match_f(K17, "8"))), message = "incomplete")
-  expect_equal(as.character(parse_eval(str_match_f(K17, "8"))[[1,1]]), "Libya")
+  expect_equal(as.character(parse_eval(str_match_f(K17, "8"))[[1, 1]]), "Libya")
 })

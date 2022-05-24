@@ -1,4 +1,4 @@
-function(){
+function() {
   #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   #                   Intro to the Tidyverse by Colleen O'Briant
   #                               Koan #19: reduce()
@@ -7,9 +7,9 @@ function(){
   # In order to progress:
   # 1. Read all instructions carefully.
   # 2. When you come to an exercise, fill in the blank, un-comment the line
-  #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
-  #    If the piece of code spans multiple lines, highlight the whole chunk or
-  #    simply put your cursor at the end of the last line.
+  #    (Ctrl/Cmd Shift C), and execute the code in the console
+  #    (Ctrl/Cmd Return). If the piece of code spans multiple lines, highlight
+  #    the whole chunk or simply put your cursor at the end of the last line.
   # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
   # 4. Save (Ctrl/Cmd S).
 
@@ -22,9 +22,9 @@ function(){
   # map(.x, .f) applies a function `.f` to every element of `.x` and creates a
   # list of outputs the same length as `.x`.
 
-  # Similarly, reduce(.x, .f) applies a 2-argument function `.f` to every element
-  # of `.x` *sequentially* to get you *one* final output. That is, it uses `.f` to
-  # reduce `.x`.
+  # Similarly, reduce(.x, .f) applies a 2-argument function `.f` to every
+  # element of `.x` *sequentially* to get you *one* final output. That is, it
+  # uses `.f` to reduce `.x`.
 
   # In this koan, we'll see how max() reduces a vector down to a single output,
   # and also that min() and sum() do the same thing.
@@ -103,11 +103,11 @@ function(){
 
   my_max(c(4, 2, 6, 8))
 
-  # Instead of creating the functions `larger` and `my_max`, if you just wanted to
-  # find the maximum of a vector using reduce(), you can use the formula syntax
-  # just like with map(). Since .f is a 2-argument function for reduce(), you'll
-  # refer to `.x` AND `.y`. .x is the value passed from previous evaluations of
-  # .f, and .y refers to the new element of the vector.
+  # Instead of creating the functions `larger` and `my_max`, if you just wanted
+  # to find the maximum of a vector using reduce(), you can use the formula
+  # syntax just like with map(). Since .f is a 2-argument function for reduce(),
+  # you'll refer to `.x` AND `.y`. .x is the value passed from previous
+  # evaluations of .f, and .y refers to the new element of the vector.
 
   reduce(c(4, 2, 6, 8), ~ if_else(.x > .y, .x, .y))
 

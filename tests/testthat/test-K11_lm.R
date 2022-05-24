@@ -3,7 +3,8 @@ K11 <- read_file("../../R/K11_lm.R")
 test_that("K11: Question 1", {
   skip_incomplete(K11, "01")
   r <- parse_eval(str_match_q(K11, "01"))
-  expect_equal(r$call, expr(lm(formula = lifeExp ~ gdpPercap, data = gapminder)))
+  expect_equal(r$call,
+               expr(lm(formula = lifeExp ~ gdpPercap, data = gapminder)))
 })
 
 test_that("K11: Question 2", {
@@ -71,6 +72,3 @@ test_that("K12: Question 12", {
   r <- parse_eval(str_match_q(K11, "12"))
   expect_equal(round(r[[1, 2]], digits = 1), 53.7)
 })
-
-
-

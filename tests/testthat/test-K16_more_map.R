@@ -1,5 +1,4 @@
 K16 <- read_file("../../R/K16_more_map.R")
-# K16 <- read_file("R/K16_more_map.R")
 
 test_that("K16: Question 1", {
   skip_if(is.null(parse_eval(str_match_f(K16, "01"))), message = "incomplete")
@@ -66,4 +65,3 @@ test_that("K16: Question 10", {
   p <- parse_eval(str_match_f(K16, "10"))
   expect_equal(class(p$layers[[1]]$geom)[[1]], "GeomDensity")
 })
-

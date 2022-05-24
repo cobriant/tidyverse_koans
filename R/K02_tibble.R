@@ -39,13 +39,13 @@ library(tidyverse)
 # Here's how to put that data into a tibble in R. Read this carefully and run
 # the code:
 
-US_data <- tibble(
+us_data <- tibble(
   year = c(1957, 1977, 1997),
   gdpPercap = c(14847, 24073, 35767),
   lifeExp = c(69.5, 73.4, 76.8)
 )
 
-US_data
+us_data
 
 # Notice that in order to build a tibble, you define vectors with 'c' that
 # become the columns of the table. The columns have names.
@@ -59,7 +59,7 @@ US_data
 
 #1@
 
-# US_data <- tibble(
+# us_data <- tibble(
 #   year      = c(1957, 1977, 1997, __),
 #   gdpPercap = c(14847, 24073, 35767, __),
 #   lifeExp   = c(69.5, 73.4, 76.8, __)
@@ -85,9 +85,9 @@ US_data
 # to print the tibble to your console either by using the function 'print',
 # or calling the dataset's name:
 
-print(US_data)
+print(us_data)
 
-US_data
+us_data
 
 # A tibble: 4 x 3
 #    year  gdpPercap lifeExp
@@ -99,7 +99,7 @@ US_data
 
 # Another way is to use 'view()' to look at the data in a separate tab.
 
-# view(US_data)
+# view(us_data)
 
 # Un-comment this line of code with Ctrl/Cmd Shift C. Then after running it,
 # re-comment it using the same hotkeys. Why did I comment out view()?
@@ -109,15 +109,15 @@ US_data
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # You can use the functions 'nrow()' and 'ncol' to find the dimensions of the
-# tibble. For instance, this tells us that US_data has 4 rows:
+# tibble. For instance, this tells us that us_data has 4 rows:
 
-nrow(US_data)
+nrow(us_data)
 
-# 2. How many columns does US_data have? ---------------------------------------
+# 2. How many columns does us_data have? ---------------------------------------
 
 #2@
 
-# ncol(US_data) == __
+# ncol(us_data) == __
 
 #@2
 
@@ -133,11 +133,11 @@ nrow(US_data)
 
 # You can get the column/variable names of a tibble using 'names()':
 
-# 3. What does names() return when you apply it to US_data? --------------------
+# 3. What does names() return when you apply it to us_data? --------------------
 
 #3@
 
-# names(US_data) == c("year", "gdpPercap", __)
+# names(us_data) == c("year", "gdpPercap", __)
 
 #@3
 

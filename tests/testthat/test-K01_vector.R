@@ -44,5 +44,3 @@ test_that("K01: Question 5", {
   skip_incomplete(K01, 5)
   expect_equal(class(parse_eval(str_match_q(K01, 5))), "character")
 })
-
-

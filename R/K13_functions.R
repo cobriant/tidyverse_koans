@@ -1,4 +1,4 @@
-function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+function() {#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   #                   Intro to the Tidyverse by Colleen O'Briant
   #                           Koan #13: Custom Functions
   #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -37,7 +37,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # This is the format for defining a function in R:
 
-  # my_function <- function(arg1, arg2, arg3){
+  # my_function <- function(arg1, arg2, arg3) {
   #     body
   #     return(output)
   # }
@@ -61,7 +61,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   # Example: this is a function that adds two numbers.
 
-  plus <- function(a, b){
+  plus <- function(a, b) {
     return(a + b)
   }
 
@@ -93,7 +93,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   #3@
 
-  # square <- function(__){
+  # square <- function(__) {
   #   __
   # }
 
@@ -134,7 +134,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # be by using 'return()', R will automatically return the last thing it
   # evaluated. So in our simple 'plus' function, we can simply define it as:
 
-  plus <- function(a, b){
+  plus <- function(a, b) {
     a + b
   }
 
@@ -143,7 +143,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # Note that this will also output a + b, because a + b was the last thing the
   # function evaluated:
 
-  plus <- function(a, b){
+  plus <- function(a, b) {
     a - b
     a + b
   }
@@ -153,7 +153,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # To get your function to output multiple values, you'll need to return a
   # vector:
 
-  plus_minus <- function(a, b){
+  plus_minus <- function(a, b) {
     c(a - b, a + b)
   }
 
@@ -164,7 +164,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   #7@
 
-  # ones <- function(){
+  # ones <- function() {
   #   __
   # }
 
@@ -179,7 +179,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # that outputs a ggplot with geom_point(). The curly braces that wrap 'xaxis'
   # and 'yaxis' will be explained in the next koan.
 
-  scatterplot <- function(tibble, xaxis, yaxis){
+  scatterplot <- function(tibble, xaxis, yaxis) {
     ggplot(data = tibble, aes(x = {{ xaxis }}, y = {{ yaxis }})) +
       geom_point()
   }
@@ -201,7 +201,7 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # color. And the geom_smooth() line is blue by default. Suppose I want my
   # points in my scatterplot to be pink by default. Here's how I can do that:
 
-  scatter_pink <- function(tibble, xaxis, yaxis, point_color = "pink"){
+  scatter_pink <- function(tibble, xaxis, yaxis, point_color = "pink") {
     ggplot(data = tibble, aes(x = {{ xaxis }}, y = {{ yaxis }})) +
       geom_point(color = point_color)
   }

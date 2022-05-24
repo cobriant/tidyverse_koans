@@ -25,13 +25,11 @@ test_that("K04: Question 4", {
 
 test_that("K04: Question 5", {
   skip_incomplete(K04, 5)
-  expect_equal(names(parse_eval(str_match_q(K04, 5))), c("lifeExp", "pop", "gdpPercap"))
+  expect_equal(names(parse_eval(str_match_q(K04, 5))),
+               c("lifeExp", "pop", "gdpPercap"))
 })
 
 test_that("K04: Question 6", {
   skip_incomplete(K04, 6)
-  expect_true(parse_eval(str_match_q(K04, 6))[[1,7]] < 9000)
+  expect_true(parse_eval(str_match_q(K04, 6))[[1, 7]] < 9000)
 })
-
-
-

@@ -157,7 +157,10 @@ library(gapminder)
 
 #09@
 
-# ggplot(data = gapminder, aes(x = lifeExp, color = continent, fill = continent)) +
+# ggplot(
+#   data = gapminder,
+#   aes(x = lifeExp, color = continent, fill = continent)
+#   ) +
 #   geom_density(alpha = .3) +
 #   __
 
@@ -296,7 +299,8 @@ ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
 
 # 18. Draw a boxplot with geom_boxplot() that compares the gdpPercap (on -------
 # the y-axis) of different continents (on the x-axis, also using color).
-# Experiment with applying a log transformation to gdpPercap (now on the y-axis).
+# Experiment with applying a log transformation to gdpPercap (now on the y
+# axis).
 
 #18@
 

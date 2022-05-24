@@ -26,9 +26,3 @@ test_that("K05: Question 5", {
   skip_incomplete(K05, 5)
   expect_equal(nrow(parse_eval(str_match_q(K05, 5))), 142)
 })
-
-
-
-
-
-

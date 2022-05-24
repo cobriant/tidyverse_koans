@@ -1,5 +1,4 @@
 K20 <- read_file("../../R/K20_accumulate.R")
-# K20 <- read_file("R/K20_accumulate.R")
 
 test_that("K20: Question 1", {
   skip_incomplete(K20, "1")
@@ -20,6 +19,3 @@ test_that("K20: Question 4", {
   skip_incomplete(K20, "4")
   expect_equal(parse_eval(str_match_q(K20, "4")), c(T, T, T, T))
 })
-
-
-

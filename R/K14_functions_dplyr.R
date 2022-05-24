@@ -1,4 +1,4 @@
-function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+function() {#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   #                   Intro to the Tidyverse by Colleen O'Briant
   #                       Koan #14: Functions that use dplyr
   #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -6,9 +6,9 @@ function(){#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # In order to progress:
   # 1. Read all instructions carefully.
   # 2. When you come to an exercise, fill in the blank, un-comment the line
-  #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
-  #    If the piece of code spans multiple lines, highlight the whole chunk or
-  #    simply put your cursor at the end of the last line.
+  #    (Ctrl/Cmd Shift C), and execute the code in the console
+  #    (Ctrl/Cmd Return). If the piece of code spans multiple lines, highlight
+  #    the whole chunk or simply put your cursor at the end of the last line.
   # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
   # 4. Save (Ctrl/Cmd S).
 
@@ -40,7 +40,7 @@ gapminder %>%
 # when I test it because it gives me an error, saying that the
 # grouping_var is not found:
 
-grouped_summary <- function(data, grouping_var, summarize_var){
+grouped_summary <- function(data, grouping_var, summarize_var) {
   data %>%
     group_by(grouping_var) %>%
     summarize(
@@ -50,14 +50,18 @@ grouped_summary <- function(data, grouping_var, summarize_var){
       )
 }
 
-# grouped_summary(data = gapminder, grouping_var = year, summarize_var = lifeExp)
+# grouped_summary(
+#   data = gapminder,
+#   grouping_var = year,
+#   summarize_var = lifeExp
+#   )
 
 # Our function finds the 'gapminder' dataset, but it can't find 'year'
 # or 'lifeExp', because it doesn't know that those are variables *in*
 # 'gapminder'. The quick fix is to add a set of double braces {{ var }} in
 # the function body:
 
-grouped_summary2 <- function(data, grouping_var, summarize_var){
+grouped_summary2 <- function(data, grouping_var, summarize_var) {
   data %>%
     group_by({{ grouping_var }}) %>%
     summarize(min  =  min({{ summarize_var }}),

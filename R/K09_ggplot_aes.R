@@ -140,7 +140,10 @@ ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
 # You can put all information in the geom_point() call:
 
 ggplot() +
-  geom_point(data = gapminder, aes(x = gdpPercap, y = lifeExp, shape = continent))
+  geom_point(
+    data = gapminder,
+    aes(x = gdpPercap, y = lifeExp, shape = continent)
+    )
 
 # But warning: if you have multiple geom's and put all information in one of
 # them, the other geom won't inherit that information.
@@ -148,7 +151,10 @@ ggplot() +
 # inherit any of the information it needs from ggplot().
 
 ggplot() +
-  geom_point(data = gapminder, aes(x = gdpPercap, y = lifeExp, shape = continent)) +
+  geom_point(
+    data = gapminder,
+    aes(x = gdpPercap, y = lifeExp, shape = continent)
+    ) +
   geom_smooth()
 
 # Instead, give geom_smooth() the information it needs either directly, or by
@@ -157,8 +163,14 @@ ggplot() +
 # which makes it less clear and readable.
 
 ggplot() +
-  geom_point(data = gapminder, aes(x = gdpPercap, y = lifeExp, shape = continent)) +
-  geom_smooth(data = gapminder, aes(x = gdpPercap, y = lifeExp))
+  geom_point(
+    data = gapminder,
+    aes(x = gdpPercap, y = lifeExp, shape = continent)
+    ) +
+  geom_smooth(
+    data = gapminder,
+    aes(x = gdpPercap, y = lifeExp)
+    )
 
 ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_point(aes(shape = continent)) +

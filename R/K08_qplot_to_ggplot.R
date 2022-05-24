@@ -33,14 +33,14 @@
 
 library(tidyverse)
 library(gapminder)
-US_data <- filter(gapminder, country == "United States")
-# view(US_data)
+us_data <- filter(gapminder, country == "United States")
+# view(us_data)
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # You've practiced building scatterplots with qplot() like this:
 
-qplot(data = US_data, x = gdpPercap, y = lifeExp)
+qplot(data = us_data, x = gdpPercap, y = lifeExp)
 
 # 1. Replicate that scatterplot using ggplot() with a points layer: ------------
 
@@ -59,7 +59,7 @@ qplot(data = US_data, x = gdpPercap, y = lifeExp)
 # You've also practiced adding main titles and axis labels to your qplot:
 
 qplot(
-  data = US_data,
+  data = us_data,
   x = gdpPercap,
   y = lifeExp,
   main = "As GDP per capita increases, so does life expectancy",
@@ -86,7 +86,7 @@ qplot(
 # You've also practiced using multiple geoms with a qplot:
 
 qplot(
-  data = US_data,
+  data = us_data,
   x = gdpPercap,
   y = lifeExp,
   geom = c("point", "line", "smooth")

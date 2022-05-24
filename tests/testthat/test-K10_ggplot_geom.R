@@ -113,4 +113,3 @@ test_that("K10: Question 19", {
   p <- parse_eval(str_match_q(K10, "19"))
   expect_equal(class(p$layers[[1]]$geom)[[1]], "GeomViolin")
 })
-

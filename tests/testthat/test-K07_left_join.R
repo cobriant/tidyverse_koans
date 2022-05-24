@@ -2,7 +2,13 @@ K07 <- read_file("../../R/K07_left_join.R")
 
 test_that("K07: Question 1", {
   skip_incomplete(K07, 1)
-  expect_equal(names(parse_eval(str_match_q(K07, 1))), c("id", "name", "license_id", "address_number", "address_street_name", "ssn"))
+  expect_equal(names(parse_eval(str_match_q(K07, 1))),
+               c("id",
+                 "name",
+                 "license_id",
+                 "address_number",
+                 "address_street_name",
+                 "ssn"))
 })
 
 test_that("K07: Question 2", {
@@ -12,7 +18,7 @@ test_that("K07: Question 2", {
 
 test_that("K07: Question 3", {
   skip_incomplete(K07, 3)
-  expect_equal(parse_eval(str_match_q(K07, 3))[[1,2]], 27)
+  expect_equal(parse_eval(str_match_q(K07, 3))[[1, 2]], 27)
 })
 
 test_that("K07: Question 4", {
