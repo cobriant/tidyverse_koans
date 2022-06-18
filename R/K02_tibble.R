@@ -17,8 +17,9 @@
 # Tibbles:
 
 # In the previous koan, we learned how to hold data in vectors. But data
-# usually comes to us in a table format (like a spreadsheet). Tibbles are
-# tidyverse spreadsheets.
+# usually comes to us in a table format (like a spreadsheet). When you're 
+# working with a tibble, you want to think of it as just a bunch of column 
+# vectors.
 
 # Load the tidyverse to get started:
 
