@@ -12,10 +12,11 @@
 # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
 # 4. Save (Ctrl/Cmd S).
 
-# Using hotkeys makes coding in RStudio easier and more natural. It also
-# reinforces good habits like saving frequently, testing frequently, and writing
-# code in the source pane and checking it as you go by dropping it down into the
-# console without copy-pasting. Practice all these hotkeys throughout this koan:
+# Using hotkeys makes coding in RStudio easier and more natural. Hotkeys also 
+# help you remember to do things like save your work often, test your code 
+# regularly, and write code in the source pane so you can check it as you go by 
+# dropping it down into the console without copy-pasting. Practice all these 
+# hotkeys throughout this koan to make them muscle memory:
 
 #   * Save your script: Ctrl/Cmd S
 #   * Execute selected code in the console: Ctrl/Cmd Return
