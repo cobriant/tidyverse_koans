@@ -45,6 +45,7 @@ gapminder %>%
 
 #1@
 
+# gapminder %>%
 # __
 
 #@1
@@ -55,6 +56,7 @@ gapminder %>%
 
 #2@
 
+# gapminder %>%
 # __
 
 #@2
@@ -111,6 +113,7 @@ gapminder %>%
 
 #3@
 
+# gapminder %>%
 # __
 
 #@3
@@ -121,6 +124,7 @@ gapminder %>%
 
 #4@
 
+# gapminder %>%
 # __
 
 #@4
@@ -171,6 +175,7 @@ gapminder %>%
 
 #5@
 
+# gapminder %>%
 # __
 
 #@5

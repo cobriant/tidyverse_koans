@@ -314,9 +314,9 @@ ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# 19. Change the plot from 10) to be a violin plot using 'geom_violin'. --------
-# Also include 'fill'. Make sure you use 'scale_y_log10()' to transform the
-# y-axis into log terms.
+# 19. Change the plot from the previous question to be a violin plot -----------
+# using 'geom_violin'. Also include 'fill'. Make sure you use 'scale_y_log10()'
+# to transform the y-axis into log terms.
 
 #19@
 
@@ -346,21 +346,19 @@ ggplot(
 # have trouble installing gganimate. If that's you, don't stress over this,
 # leave the code below commented out.)
 
-# install.packages("gganimate", dependencies = T)
-#
-ggplot(
-  data = gapminder,
-  aes(x = log(gdpPercap), y = lifeExp)
-  ) +
-  geom_point(aes(color = continent)) +
-  geom_density2d(color = "grey", alpha = .5) +
-  gganimate::transition_time(year) +
-  labs(title = "Year: {frame_time}")
+# ggplot(
+#   data = gapminder,
+#   aes(x = log(gdpPercap), y = lifeExp)
+#   ) +
+#   geom_point(aes(color = continent)) +
+#   geom_density2d(color = "grey", alpha = .5) +
+#   gganimate::transition_time(year) +
+#   labs(title = "Year: {frame_time}")
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Great work! You're one step closer to tidyverse enlightenment. Make sure to
 # return to this topic to meditate on it later.
 
-# To keep learning about ggplot, this is an excellent manual:
-#                   https://ggplot2-book.org/introduction.html
+# To keep learning about ggplot (a great skill for your resume!), this is an
+# excellent manual: https://ggplot2-book.org/introduction.html

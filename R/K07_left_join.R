@@ -66,7 +66,9 @@ people %>%
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # 1. Query the data to find out if there's anyone with your first or last ------
-# name using `|`, which is the logical operator for "or".
+# name using `|`, which is the logical operator for "or". If not, is there
+# anyone with the first few letters of your first name, or the last few letters
+# of your last name?
 
 #1@
 
@@ -193,7 +195,7 @@ people %>%
   left_join(drivers_license, by = c("license_id" = "id"))
 
 # left_join() is one of the most useful joins, and it's the only join you'll
-# need to solve the murder mystery in project 2, but there are others. 99% of
+# need to solve the murder mystery project, but there are others. 99% of
 # the time, you'll only ever need left_join() and inner_join(). Check out the
 # dplyr cheat sheet (page 2, right hand side) for more information:
 # https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf

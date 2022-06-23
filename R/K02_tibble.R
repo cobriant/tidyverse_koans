@@ -38,7 +38,8 @@ library(tidyverse)
 # In 1997, US GDP per capita was $35,767 and life expectancy was 76.8 years.
 
 # Here's how to put that data into a tibble in R. Read this carefully and run
-# the code:
+# the code (highlight the code you want to run or put your cursor at the end
+# of an expression and hit Cmd-Return):
 
 us_data <- tibble(
   year = c(1957, 1977, 1997),
