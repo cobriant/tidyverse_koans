@@ -9,13 +9,13 @@
 #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
 #    If the piece of code spans multiple lines, highlight the whole chunk or
 #    simply put your cursor at the end of the last line.
-# 3. Test that your answers are correct (Ctrl/Cmd Shift T)
-# 4. Save (Ctrl/Cmd S).
+# 3. Save (Ctrl/Cmd S).
+# 4. Test that your answers are correct (Ctrl/Cmd Shift T).
 
-# Using hotkeys makes coding in RStudio easier and more natural. Hotkeys also 
-# help you remember to do things like save your work often, test your code 
-# regularly, and write code in the source pane so you can check it as you go by 
-# dropping it down into the console without copy-pasting. Practice all these 
+# Using hotkeys makes coding in RStudio easier and more natural. Hotkeys also
+# help you remember to do things like save your work often, test your code
+# regularly, and write code in the source pane so you can check it as you go by
+# dropping it down into the console without copy-pasting. Practice all these
 # hotkeys throughout this koan to make them muscle memory:
 
 #   * Save your script: Ctrl/Cmd S
@@ -47,7 +47,9 @@
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# 1. Make the first element of this numeric vector '6'. ------------------------
+# 1. Make the first element of this numeric vector '6'. Remember to always
+# un-comment the line of code (Cmd-Shift-C), execute it (Cmd-Return), and then
+# test this file to make sure you passed (Cmd-Shift-T).
 
 #1@
 

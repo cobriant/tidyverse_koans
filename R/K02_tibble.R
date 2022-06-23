@@ -9,16 +9,16 @@
 #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
 #    If the piece of code spans multiple lines, highlight the whole chunk or
 #    simply put your cursor at the end of the last line.
-# 3. Test that your answers are correct (Ctrl/Cmd Shift T)
-# 4. Save (Ctrl/Cmd S).
+# 3. Save (Ctrl/Cmd S).
+# 4. Test that your answers are correct (Ctrl/Cmd Shift T).
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Tibbles:
 
 # In the previous koan, we learned how to hold data in vectors. But data
-# usually comes to us in a table format (like a spreadsheet). When you're 
-# working with a tibble, you want to think of it as just a bunch of column 
+# usually comes to us in a table format (like a spreadsheet). When you're
+# working with a tibble, you want to think of it as just a bunch of column
 # vectors.
 
 # Load the tidyverse to get started:

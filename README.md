@@ -45,6 +45,9 @@ library(tidyverse)
 install.packages("gapminder")
 library(gapminder)
 
+# animation library
+install.packages("gganimate")
+
 # another package I developed called qelp (quick help) for beginner-friendly help docs
 install.packages("devtools")
 library(devtools)

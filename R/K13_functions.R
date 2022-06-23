@@ -9,8 +9,8 @@ function() {#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   #    (Ctrl/Cmd Shift C), and execute the code in the console (Ctrl/Cmd Return).
   #    If the piece of code spans multiple lines, highlight the whole chunk or
   #    simply put your cursor at the end of the last line.
-  # 3. Test that your answers are correct (Ctrl/Cmd Shift T)
-  # 4. Save (Ctrl/Cmd S).
+  # 3. Save (Ctrl/Cmd S).
+  # 4. Test that your answers are correct (Ctrl/Cmd Shift T).
 
   #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
