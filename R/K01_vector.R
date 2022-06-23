@@ -32,7 +32,7 @@
 #
 # You should install R, RStudio, the tidyverse, and qelp along with these
 # tidyverse koans. Go here for instructions:
-# https://cobriant.github.io/421_fall_21/materials/intro_4.html
+# https://cobriant.github.io/421/materials/intro_4.html
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
