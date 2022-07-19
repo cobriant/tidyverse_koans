@@ -180,7 +180,7 @@ function() {#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   #     tibble(
   #       __
   #     ) %>%
-  #       lm(y ~ observed_x, data = .) %>%
+  #       lm(y ~ x_observed, data = .) %>%
   #       broom::tidy() %>%
   #       select(estimate) %>%
   #       slice(2)
@@ -202,7 +202,7 @@ function() {#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   #     tibble(
   #       __
   #     ) %>%
-  #       lm(y ~ observed_x, data = .) %>%
+  #       lm(y ~ x_observed, data = .) %>%
   #       broom::tidy() %>%
   #       select(estimate) %>%
   #       slice(2)
