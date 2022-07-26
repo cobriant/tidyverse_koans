@@ -79,7 +79,7 @@ Now hit `Cmd/Ctrl Shift T`. You've just tested the first koan. You should see:
 
 What does this mean? If there are errors in your R script, the test will not complete. Since it completed, you know there are no errors. Since `FAIL` is 0, you also haven't failed any of the questions yet. But `PASS` is also 0, so you haven't passed the questions either. Since they're blank right now, the test will skip them. That's why `SKIP` is 9.
 
-Go ahead and start working on the koans and learning about the tidyverse! When you're finished with a koan and the tests pass, it can nice to be able to see your work in a compiled html document (Ctrl/Cmd Shift K or File > Compile Report).
+Go ahead and start working on the koans and learning about the tidyverse! When you're finished with a koan and the tests pass, it can be nice to be able to see your work in a compiled html document (Ctrl/Cmd Shift K or File > Compile Report).
 
 # 👩‍🏫 Outline for instructors
 
