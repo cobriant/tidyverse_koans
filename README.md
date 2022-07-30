@@ -4,19 +4,19 @@ Hi! I'm an economist working on my PhD at the University of Oregon. I wrote thes
 
   1) Even if you've been discouraged before, building great data analytics skills is not something that's beyond you! 💪
   2) The tidyverse is a joy. Beginners must be encouraged to appreciate elegant solutions and aesthetic code. That way, they start caring about things other than solving the problem as fast as possible. 💖
-  5) You can use the tidyverse for a shockingly wide range of tasks. 💯
+  5) You can use the tidyverse for a shockingly wide variety of tasks. 💯
 
-You don't need to know how to program to do these koans. They get gradually harder as you go along, and are meant to be a way to learn about all the data analytics skills that an economist might need. By the end, you'll be able to query data, visualize it, model it, and even run simulations. You'll be able to use these koans as a jumping-off point for getting your own novel research ideas up and running.
+You don't need to know how to program to do these koans. They get gradually harder as you go along, and are meant to be a way to learn about all the data analytics skills that an economist might need. By the end, you'll be able to query data, visualize it, model it, and even run simulations to get insights about the properties of your estimators. Basically, you'll be able to use these koans as a jumping-off point for getting your own novel research ideas up and running.
 
 # 🤔💭 More philosophy
 
 ## Koans > Programming books
 
-There are lots of great books about the tidyverse (R4DS and Advanced R come to mind for sure). But if you want to learn the tidyverse quickly and effectively, try using these koans! The fill-in-the-blank exercises help minimize learner frustration. I've conducted about 100 user interviews for these koans, and my students have found them to be highly effective and relatively painless.
+There are lots of great books about the tidyverse (R4DS and Advanced R come to mind for sure). But if you want to learn the tidyverse quickly and effectively, these koans are the best place to start. Koans are fill-in-the-blank exercises that are great for minimizing frustration, practicing correct syntax, and seeing the wide range of problems that can be solved using the tidyverse. They're done locally in RStudio, so that when inspiration strikes, you can just open a new R script and get going. I've conducted about 100 user interviews for these koans, and my students have found them to be highly effective and relatively painless.
 
 ## Koans > in-browser resources like datacamp or learnr
 
-With koans, you're working in the development environment you'll use for your own projects (scripts inside RStudio). With [datacamp](https://dnlmc.medium.com/dont-use-datacamp-ef04adcf1b7f#:~:text=After%20the%20webinar%2C%20some%20instructors,'%E2%80%9D) or learnr, you're not. Transitioning from the browser to using scripts can be difficult for learners, so it's better to teach them to write code in a script from the beginning.
+With koans, you're working in the development environment you'll use for your own projects (scripts inside RStudio). With [datacamp](https://dnlmc.medium.com/dont-use-datacamp-ef04adcf1b7f#:~:text=After%20the%20webinar%2C%20some%20instructors,'%E2%80%9D) or learnr, you're not. Transitioning from the browser to using scripts can be difficult for learners, so it's better to teach them to write code in a script from the outset.
 
 ## To summarize, koans are great because they:
 
@@ -50,6 +50,7 @@ install.packages("gganimate", dependencies = TRUE)
 install.packages("hexbin")
 
 # another package I developed called qelp (quick help) for beginner-friendly help docs
+install.packages("Rcpp", dependencies = TRUE)
 install.packages("devtools", dependencies = TRUE)
 library(devtools)
 install_github("cobriant/qelp")
@@ -81,11 +82,13 @@ What does this mean? If there are errors in your R script, the test will not com
 
 Go ahead and start working on the koans and learning about the tidyverse! When you're finished with a koan and the tests pass, it can be nice to be able to see your work in a compiled html document (Ctrl/Cmd Shift K or File > Compile Report).
 
+One last thing: whenever you want to work on the koans, make sure you open RStudio by opening the "`tidyverse_koans-main`" project, not just the individual koan file. If you open the koans in a session that's not associated with the "`tidyverse_koans-main`" project, the tests will fail to run. You can always see which project your current session is being associated with by looking at the upper right hand corner of RStudio: if you're in the "`tidyverse_koans-main`" project, you'll see "`tidyverse_koans-main`" up there. That's good. If you're in no project at all, you'll see "Project: (None)" up there. That's not good, especially if you want the tests to run. If you see "Project: (None)", just click that text and you'll be able to switch over to the "`tidyverse_koans-main`" project.
+
 # 👩‍🏫 Outline for instructors
 
 |   |   |   |
 |-----|-----|-----|
-| [K01_vector.R](https://github.com/cobriant/tidyverse_koans/blob/main/R/K01_vector.R) | Data in R is held in vectors. Did you know that even a single number like `4` is a vector of length 1? Starting with vectors gets students familiar with the concept of functions being vectorized (many functions work on vectors of any length). This is a powerful first building block for the tidyverse's functional, declarative approach. It's a cardinal sin to let learners believe they need to do something as complicated as looping or mapping over a vector when the function they're applying is already vectorized. | |
+| [K01_vector.R](https://github.com/cobriant/tidyverse_koans/blob/main/R/K01_vector.R) | Data in R is held in vectors. Did you know that even a single number like `4` is a vector in R, of length 1? Starting with vectors gets learners familiar with the concept of functions being vectorized (many functions work on vectors of any length). This is a powerful first building block for the tidyverse's functional, declarative approach. It's a cardinal sin to let learners believe they need to do something as complicated as looping or mapping over a vector when the function they're applying is already vectorized. | |
 | [K02_tibble.R](https://github.com/cobriant/tidyverse_koans/blob/main/R/K02_tibble.R) | The next building block to learn about are tibbles: the tidyverse's spreadsheet. Data is still being held in vectors (column vectors specifically). The **tidied data format** is where columns are variables and rows are observations. | <img src="https://github.com/tidyverse/tibble/raw/main/man/figures/logo.png" align="right" /> |
 | [K03_pipe.R](https://github.com/cobriant/tidyverse_koans/blob/main/R/K03_pipe.R) | The most commonly used function in the tidyverse. Use it to chain together a sequence of operations. | <img src="https://github.com/tidyverse/magrittr/raw/main/man/figures/logo.png" align="right" /> |
 | [K04_dplyr1.R](https://github.com/cobriant/tidyverse_koans/blob/main/R/K04_dplyr1.R) | The first 3 dplyr functions to learn are filter(), select(), and mutate(). Tidyverse literature talks about using dplyr to "manipulate" data. I don't like that. I think it's a lot more useful for learners to think about using dplyr for writing *queries* on their data, like with SQL. That way, they remember that if they have a question about their data, they should reach for dplyr.| <img src="https://github.com/tidyverse/dplyr/raw/main/man/figures/logo.png" align="right" /> |
