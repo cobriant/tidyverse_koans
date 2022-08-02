@@ -6,6 +6,6 @@ test_that("K14: Question 1", {
 })
 
 test_that("K14: Question 2", {
-  skip_na(K14, "2")
+  skip_incomplete(K14, "2")
   expect_equal(parse_eval(str_match_q(K14, "2"))[[1, 4]], 53.82)
 })
