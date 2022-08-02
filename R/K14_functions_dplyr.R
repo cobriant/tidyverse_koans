@@ -40,15 +40,15 @@ gapminder %>%
 # when I test it because it gives me an error, saying that the
 # grouping_var is not found:
 
-grouped_summary <- function(data, grouping_var, summarize_var) {
-  data %>%
-    group_by(grouping_var) %>%
-    summarize(
-      min  =  min(summarize_var),
-      mean = mean(summarize_var),
-      max  =  max(summarize_var)
-      )
-}
+# grouped_summary <- function(data, grouping_var, summarize_var) {
+#   data %>%
+#     group_by(grouping_var) %>%
+#     summarize(
+#       min  =  min(summarize_var),
+#       mean = mean(summarize_var),
+#       max  =  max(summarize_var)
+#       )
+# }
 
 # grouped_summary(
 #   data = gapminder,
@@ -61,27 +61,27 @@ grouped_summary <- function(data, grouping_var, summarize_var) {
 # 'gapminder'. The quick fix is to add a set of double braces {{ var }} in
 # the function body:
 
-grouped_summary2 <- function(data, grouping_var, summarize_var) {
-  data %>%
-    group_by({{ grouping_var }}) %>%
-    summarize(min  =  min({{ summarize_var }}),
-              mean = mean({{ summarize_var }}),
-              max  =  max({{ summarize_var }}))
-}
+# grouped_summary2 <- function(data, grouping_var, summarize_var) {
+#   data %>%
+#     group_by({{ grouping_var }}) %>%
+#     summarize(min  =  min({{ summarize_var }}),
+#               mean = mean({{ summarize_var }}),
+#               max  =  max({{ summarize_var }}))
+# }
 
 # Now I don't get that error:
 
-grouped_summary2(
-  data = gapminder,
-  grouping_var = year,
-  summarize_var = lifeExp
-  )
+# grouped_summary2(
+#   data = gapminder,
+#   grouping_var = year,
+#   summarize_var = lifeExp
+#  )
 
-grouped_summary2(
-  data = gapminder,
-  grouping_var = continent,
-  summarize_var = gdpPercap
-  )
+# grouped_summary2(
+#   data = gapminder,
+#   grouping_var = continent,
+#   summarize_var = gdpPercap
+#  )
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
