@@ -52,20 +52,22 @@ us_data
 # Notice that in order to build a tibble, you define vectors with 'c' that
 # become the columns of the table. The columns have names.
 
-# Now suppose we get new data for 2017. We'd like to add a row to the bottom:
-# In 2017, US GDP per capita was $60,062 and life expectancy was 78.5 years.
+# Now take some data for Canada:
+# In 1957, GDP per capita in Canada was $12,490 and life expectancy was 70.0 years.
+# In 1977, GDP per capita in Canada was $22,091 and life expectancy was 74.2 years.
+# In 1997, GDP per capita in Canada was $28,955 and life expectancy was 78.0 years.
 
-# 1. Fill in the blanks to add the new piece of data ---------------------------
-
-# And run the code to save your tibble to your environment:
+# 1. Create a tibble that holds the canada_data: -------------------------------
 
 #1@
 
-# us_data <- tibble(
-#   year      = c(1957, 1977, 1997, __),
-#   gdpPercap = c(14847, 24073, 35767, __),
-#   lifeExp   = c(69.5, 73.4, 76.8, __)
+# canada_data <- tibble(
+#   year      = __,
+#   gdpPercap = __,
+#   lifeExp   = __
 # )
+
+# canada_data
 
 #@1
 
@@ -73,11 +75,11 @@ us_data
 #  1. Each column must be named ('year', 'gdpPercap', and 'lifeExp' are the
 #     names here). If you try to define a column without giving it a name,
 #     'tibble' will come up with the name for you.
-#  2. Each column must have the same number of rows (each column vector has 4
-#     elements, so each column vector has 4 rows, and the tibble has 4 rows). If
+#  2. Each column must have the same number of rows (each column vector has 3
+#     elements, so each column vector has 3 rows, and the tibble has 3 rows). If
 #     you try to define a column that's shorter than the others, 'tibble' will
 #     either recycle the values of that column to make it long enough, or it
-#     will throw an error.
+#     will give you an error.
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -106,12 +108,15 @@ us_data
 # Un-comment this line of code with Ctrl/Cmd Shift C. Then after running it,
 # re-comment it using the same hotkeys. Why did I comment out view()?
 # It doesn't play nicely with my koan tests (it opens a view tab each test,
-# which will be slow and painful for you).
+# which will be slow and painful for you). It's best to always comment out
+# view() calls in the koans.
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+#                         ----- Tibble Dimensions -----
+
 # You can use the functions 'nrow()' and 'ncol' to find the dimensions of the
-# tibble. For instance, this tells us that us_data has 4 rows:
+# tibble. For instance, this tells us that us_data has 3 rows:
 
 nrow(us_data)
 
@@ -127,13 +132,15 @@ nrow(us_data)
 ?qelp::ncol
 
 # In a tibble, columns are called *variables*. Rows are called *observations*.
-# This is very important to understand. In our tibble, the *variables/columns*
+# This is very important to understand. In our tibble, the *variables* (columns)
 # are 'year','gdpPercap', and 'lifeExp': they're the things that were measured
-# for each *row/observation*: for 1957, 1977, 1997, and 2017.
+# for each *observation* (row): for 1957, 1977, and 1997.
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# You can get the column/variable names of a tibble using 'names()':
+#                         ----- Variable Names -----
+
+# You can get the variable (column) names of a tibble using 'names()':
 
 # 3. What does names() return when you apply it to us_data? --------------------
 
@@ -142,6 +149,28 @@ nrow(us_data)
 # names(us_data) == c("year", "gdpPercap", __)
 
 #@3
+
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#                         ----- Adding Rows -----
+
+# Suppose you want to append a row (or several) to your dataset. You can do that
+# using the function 'add_row()'. It takes the tibble as the first argument and
+# then variable names and values to construct the new row. Suppose we got a new
+# observation (row) about Canada: In 2007, GDP per capita in Canada was $36,319
+# and life expectancy was 80.7 years.
+
+
+#4@
+
+# add_row(
+#   canada_data,
+#   year = __,
+#   gdpPercap = __,
+#   lifeExp = __
+# )
+
+#@4
 
 # Make sure to read the qelp docs for 'tibble':
 ?qelp::tibble

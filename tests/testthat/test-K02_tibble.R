@@ -14,3 +14,8 @@ test_that("K02: Question 3", {
   skip_incomplete(K02, 3)
   expect_equal(parse_eval(str_match_q(K02, 3)), c(T, T, T))
 })
+
+test_that("K02: Question 4", {
+  skip_incomplete(K02, 4)
+  expect_equal(nrow(parse_eval(str_match_q(K02, 4))), 4)
+})

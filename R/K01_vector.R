@@ -32,11 +32,11 @@
 #
 # You should install R, RStudio, the tidyverse, and qelp along with these
 # tidyverse koans. Go here for instructions:
-# https://cobriant.github.io/421/materials/intro_4.html
+# https://colleen.quarto.pub/the-tidy-econometrics-workbook/#setting-up-your-workspace
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-#                     -----  Create a vector with c() -----
+#                     -----  Create a vector with 'c()' -----
 #
 # In R, data is held in vectors. One way to construct a vector is to use the
 # function 'c()'. 'c()' is short for "combine": you can combine elements into a
@@ -124,18 +124,36 @@
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+#                              -----  Length -----
+
+# Vectors have a property called *length*, which is the number of elements in
+# that vector. The length of the vector c("apple", "banana", "economics") is 3.
+
+length(c("apple", "banana", "economics")) == 3
+
+# 4. Create a vector of length 5. It can be a character vector or --------------
+# a numeric vector.
+
+#4@
+
+# length(___) == 5
+
+#@4
+
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 #                    -----  More Ways to Create Vectors -----
 #
-# 4. If you want to create a vector of consecutive numbers like ----------------
+# 5. If you want to create a vector of consecutive numbers like ----------------
 #    'c(1, 2, 3)', the shorthand is '1:3'.
 
 c(1, 2, 3) == 1:3
 
-#4@
+#5@
 
 # c(2, 3, 4) == __:__
 
-#@4
+#@5
 
 
 # To create a vector with elements that are repeated, use 'rep':
@@ -152,13 +170,13 @@ rep(1:3, each = 5)
 # This randomly draws 0's or 1's to create a random vector of length 10.
 sample(c(0, 1), size = 10, replace = TRUE)
 
-# 5. Create a random character vector that draws "heads" or "tails". -----------
+# 6. Create a random character vector that draws "heads" or "tails". -----------
 
-#5@
+#6@
 
 # sample(__, size = 5, replace = TRUE)
 
-#@5
+#@6
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
