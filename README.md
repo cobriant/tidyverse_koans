@@ -76,9 +76,9 @@ Windows: `Tools > Modify keyboard shortcuts > Run a test file > Ctrl Shift T`
 
 Now hit `Cmd/Ctrl Shift T`. You've just tested the first koan. You should see:
 
-`[ FAIL 0 | WARN 0 | SKIP 9 | PASS 0 ]`
+`[ FAIL 0 | WARN 0 | SKIP 10 | PASS 0 ]`
 
-What does this mean? If there are errors in your R script, the test will not complete. Since it completed, you know there are no errors. Since `FAIL` is 0, you also haven't failed any of the questions yet. But `PASS` is also 0, so you haven't passed the questions either. Since they're blank right now, the test will skip them. That's why `SKIP` is 9.
+What does this mean? If there are errors in your R script, the test will not complete. Since it completed, you know there are no errors. Since `FAIL` is 0, you also haven't failed any of the questions yet. But `PASS` is also 0, so you haven't passed the questions either. Since they're blank right now, the test will skip them. That's why `SKIP` is 10.
 
 Go ahead and start working on the koans and learning about the tidyverse! When you're finished with a koan and the tests pass, it can be nice to be able to see your work in a compiled html document (Ctrl/Cmd Shift K or File > Compile Report).
 
