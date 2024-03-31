@@ -1,0 +1,22 @@
+Package: tidyversekoans
+Title: Learn the tidyverse, from dplyr to ggplot2 to purrr
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: The Koans walk you along the path to enlightenment in order to 
+    learn the tidyverse, from dplyr to ggplot2 to purrr. I designed the koans 
+    for a 400 level econometrics course, so some extra attention goes to dealing 
+    with econometrics-type problems in R.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
