@@ -52,12 +52,12 @@
 
 # Run this code to get started and to view the dataset:
 
-library(tidyverse)
 # Un-comment the next line to install a new package 'gapminder', then re-comment
 # it so you don't keep installing it every time you run this script or test
 # this koan.
 # install.packages("gapminder")
 library(gapminder)
+library(tidyverse)
 # view(gapminder)
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
