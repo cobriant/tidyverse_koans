@@ -9,8 +9,7 @@
 # save your progress (Ctrl/Cmd S), execute the code in the console (put your
 # cursor in the piece of code and hit Ctrl/Cmd Return), and test your answer by
 # running the test file (Ctrl/Cmd Shift T). When you've passed all tests, compile
-# ("knit") the script to html (Ctrl/Cmd Shift K) and turn the html file in on
-# Canvas.
+# ("knit") the script to html (Ctrl/Cmd Shift K) and turn in the html file.
 
 # Using hotkeys makes coding in RStudio easier and more natural. Hotkeys also
 # help you remember to do things like save your work often, test your code
