@@ -147,7 +147,8 @@ people %>%
 
 # 5. Your turn: use left_join() to join 'people' with 'income'. ----------------
 # Since the key has the same name in both tibbles ("ssn"), 'by = "ssn"'
-# will work.
+# will work. You can temporarily pipe the result into view() to see the
+# result in a separate tab for clearer inspection.
 
 #5@
 
