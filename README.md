@@ -60,6 +60,10 @@ install_github("cobriant/qelp")
 
 # If everything went right, the help docs I wrote on the function `install.packages` 
 # should pop up in the lower right hand pane.
+
+# install qplotforever
+install.packages("remotes")
+remotes::install_github("cobriant/qplotforever")
 ```
 
 ## 3. Install the koans
