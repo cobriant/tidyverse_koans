@@ -33,7 +33,6 @@
 
 library(tidyverse)
 library(gapminder)
-library(qplotforever)
 usdata <- filter(gapminder, country == "United States")
 # view(usdata)
 
