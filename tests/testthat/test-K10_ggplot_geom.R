@@ -87,7 +87,7 @@ test_that("K10: Question 14", {
 test_that("K10: Question 15", {
   skip_incomplete(K10, "15")
   p <- parse_eval(str_match_q(K10, "15"))
-  expect_equal(p$labels$x, "log(gdpPercap)")
+  expect_equal(rlang::as_label(p$mapping$x), "log(gdpPercap)")
 })
 
 test_that("K10: Question 16", {
