@@ -24,14 +24,14 @@ test_that("K09: Question 4", {
   skip_incomplete(K09, 4)
   p <- parse_eval(str_match_q(K09, 4))
 
-  expect_equal(rlang::as_label(p$mapping$shape), "continent")
+  expect_equal(rlang::as_label(p$layers[[1]]$mapping$shape), "continent")
 })
 
 test_that("K09: Question 5", {
   skip_incomplete(K09, 5)
   p <- parse_eval(str_match_q(K09, 5))
 
-  expect_equal(rlang::as_label(p$mapping$colour), "continent")
-  expect_equal(rlang::as_label(p$mapping$size),   "pop")
+  expect_equal(rlang::as_label(p$layers[[1]]$mapping$colour), "continent")
+  expect_equal(rlang::as_label(p$layers[[1]]$mapping$size),   "pop")
 })
 
